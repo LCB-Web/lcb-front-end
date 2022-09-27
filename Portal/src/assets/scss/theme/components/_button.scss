@@ -1,0 +1,86 @@
+// button
+
+
+// Primary Link
+
+.btn-primary-link {
+  font-weight: $font-weight-bold;
+  color: $primary;
+  text-decoration: $link-decoration;
+  border-bottom: 2px solid $primary;
+  @include hover() {
+    color: #ff3912;
+    text-decoration: $link-hover-decoration;
+    border-bottom: 2px solid #ff3912;
+  }
+  &:focus,
+  &.focus {
+    text-decoration: $link-hover-decoration;
+    box-shadow: none;
+  }
+  &:disabled,
+  &.disabled {
+    color: $btn-link-disabled-color;
+    pointer-events: none;
+  }
+  
+}
+
+
+ // Secondary link
+
+.btn-secondary-link {
+  font-weight: $font-weight-bold;
+  color: $secondary;
+  text-decoration: $link-decoration;
+  border-bottom: 2px solid $secondary;
+  @include hover() {
+    color: #56269c;
+    text-decoration: $link-hover-decoration;
+    border-bottom: 2px solid #56269c;
+  }
+  &:focus,
+  &.focus {
+    text-decoration: $link-hover-decoration;
+    box-shadow: none;
+  }
+  &:disabled,
+  &.disabled {
+    color: $btn-link-disabled-color;
+    pointer-events: none;
+  }
+ 
+}
+ 
+
+
+// Soft variants
+
+@mixin btn-variant-soft($bg, $color) {
+  background-color: $bg;
+  color: $color;
+  @include hover-focus {
+    background-color: fade-in($bg, 0.05);
+    color: $color;
+  }
+}
+
+@each $color, $value in $theme-colors {
+  .btn-#{$color}-soft {
+    @include btn-variant-soft(rgba($value, $btn-soft-bg-opacity), $value);
+  }
+}
+
+
+
+// btn play
+.btn-play {
+  background-color: $white;
+  color: $primary;
+  transition: 0.2s ease;
+  &:hover {
+    background-color: $primary;
+    color: $white;
+    transition: 0.2s ease;
+  }
+}

@@ -1,0 +1,18 @@
+<div>
+    <div class="card border-0">
+        <a routerLink="/themas/{{thema._id}}" class="img-zoom">
+            <img class="rounded img-fluid" src="{{ thema.banner.msdyncrm_blobcdnuri }}" alt="">
+        </a>
+    </div>
+    <div class="card border-0">
+        <div class="card-body mt-n13 bg-white mr-6 rounded-right p-4">
+            <a routerLink="/themas/{{thema._id}}">
+                <h4 class="mb-3" title="{{ thema.bhs_name }}">{{ thema.bhs_name }}</h4>
+            </a>
+            <p>
+                {{ thema.bhs_korteomschrijving  }}
+            </p>
+            <a routerLink="/themas/{{thema._id}}" class="btn-primary-link">Lees meer</a>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,30 @@
+@import "./theme/variables";
+
+// 
+// user-variables.scss
+// Use this to overwrite Bootstrap and Coach variables
+//
+// Example of a variable override to change Coach primary color
+// Remove the "//" to comment it in and see it in action!
+// $primary: #000;
+
+$primary: #FFCB17;
+$secondary: #04A3E0;
+$success:  #B8D433;
+$info: #1EBEBE;
+$warning: #F6BD30;
+$danger: #EE1B3A;
+$dark: black;
+
+$link-color: #cb9804;
+$linkedin: #0077B5;
+
+$btn-font-weight: 700;
+
+
+$enable-shadows: true;
+
+$input-border-color: $gray-900;
+$input-placeholder-color: $gray-800;
+
+$container-max-widths: (sm: 540px, md: 720px, lg: 960px, xl: 1390px) !default;

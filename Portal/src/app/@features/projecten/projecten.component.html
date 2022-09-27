@@ -1,0 +1,109 @@
+<div class="container-xl mt-6">
+    <div class="row">
+        <div class="col-md-12">
+<!-- hero section -->
+<div class="bg-shape bg-cover mt-n7" style=" background-image:linear-gradient(180deg, rgba(30, 24, 53, 0.4) 0%, rgba(30, 24, 53, 0.4) 90.16%),
+      url(https://mktdplp102neda.azureedge.net/org-a647dfff7e494f88ba3abc2ab0acca17/6b0f4433-495f-ec11-8f8f-000d3ab55494/EiedRnxsvK8w32sKAjIfoI0XT94XMb9SXgWPv0vkIg4!);">
+    <div class="container">
+        <div class="row">
+            <div class="offset-lg-2 col-lg-8 col-md-12 col-12">
+                <div class="text-center py-lg-15 py-12">
+                    <a href="#!" class="font-weight-bold text-white mb-0 display-4">Projecten</a>
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- end hero section -->
+
+<!-- start projecten -->
+<div class="col-12 col-md-12 card">
+
+    <div class="mb-8 card-header">
+        <!-- nav tabs -->
+        <ul class="nav-pills-border nav nav-pills nav-justified mb-5 " id="pills-tab" role="tablist">
+            <li class="nav-item">
+                <a class="nav-link active font-weight-bold text-dark rounded-0" id="pills-eventOne-tab"
+                   data-toggle="pill" href="#pills-eventOne" role="tab" aria-controls="pills-eventOne"
+                   aria-selected="true">Actueel</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link font-weight-bold text-dark rounded-0" id="pills-eventTwo-tab" data-toggle="pill"
+                   href="#pills-eventTwo" role="tab" aria-controls="pills-eventTwo" aria-selected="false">Verwacht</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link font-weight-bold text-dark rounded-0" id="pills-eventThree-tab" data-toggle="pill"
+                   href="#pills-eventThree" role="tab" aria-controls="pills-eventThree"
+                   aria-selected="false">Gesloten</a>
+            </li>
+        </ul>
+        <!-- end nav tabs -->
+
+
+        <!-- results -->
+        <div class="col-12 col-md-12 col-xl-12">
+            <div class="tab-content" id="pills-tabContent">
+                <div class="tab-pane fade show active" id="pills-eventOne" role="tabpanel"
+                     aria-labelledby="pills-eventOne-tab">
+                    <div class="card">
+                        <div class="card-header bg-white">
+                            <h4 class="h5 mb-0">Actuele projecten</h4>
+                        </div>
+                        <div class="card-body p-4">
+                            <div class="row">
+                                <app-projecten-block class="col-sm-4" *ngFor="let project of projecten | async"
+                                                     [project]=project></app-projecten-block>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tab-pane fade" id="pills-eventTwo" role="tabpanel" aria-labelledby="pills-eventTwo-tab">
+                    <div class="card">
+                        <div class="card-header bg-white">
+                            <h4 class="h5 mb-0">Verwachte projecten</h4>
+                        </div>
+                        <div class="card-body p-4 ">
+                            <div class="row">
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="tab-pane fade" id="pills-eventThree" role="tabpanel" aria-labelledby="pills-eventThree-tab">
+                    <div class="card">
+                        <div class="card-header bg-white">
+                            <h4 class="h5 mb-0">Gesloten projecten</h4>
+                        </div>
+                        <div class="card-body p-4 ">
+                            <div class="row">
+
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <!-- end results -->
+
+
+    </div>
+</div>
+
+</div>
+</div>
+</div>
+
+
+
+
+
+
+
+

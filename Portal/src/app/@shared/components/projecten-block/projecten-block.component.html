@@ -1,0 +1,18 @@
+<div>
+    <div class="card border-0">
+        <a routerLink="/projecten/{{project._id}}" class="img-zoom">
+            <img class="rounded img-fluid" src="{{ project.banner.msdyncrm_blobcdnuri }}" alt="">
+        </a>
+    </div>
+    <div class="card border-0">
+        <div class="card-body mt-n13 bg-white mr-6 rounded-right p-4">
+            <a routerLink="/projecten/{{project._id}}">
+                <h4 class="mb-3" title="{{ project.bhs_name }}">{{ project.bhs_name }}</h4>
+            </a>
+            <p>
+                {{ project.bhs_korteomschrijving  }}
+            </p>
+            <a routerLink="/projecten/{{project._id}}" class="btn-primary-link">Lees meer</a>
+        </div>
+    </div>
+</div>

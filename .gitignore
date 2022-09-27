@@ -1,0 +1,4 @@
+# Project exclude paths
+/api/dist/
+/api/node_modules/
+/MongoDB/data/

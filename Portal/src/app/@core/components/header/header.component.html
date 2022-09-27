@@ -1,0 +1,125 @@
+<!-- Fixed Top -->
+<div class="header fixed-top header-collapse bg-transparent">
+  <!-- navigation start -->
+  <div class="container-xl">
+
+    <nav class="navbar navbar-expand-lg navbar-default">
+      <!-- Logo -->
+      <a class="navbar-brand" routerLinkActive="active" routerLink="/">
+        <img src="https://mktdplp102neda.azureedge.net/org-a647dfff7e494f88ba3abc2ab0acca17/df071d2c-8574-ec11-8943-000d3adc9342/YBDHoJ69GShEycD1_feWXUwvx9qO58zmwM_cLG837ns!" alt="Logo LCB" />
+      </a>
+      <!-- end logo -->
+
+      <!-- Hamburger icon for mobile -->
+      <button class="navbar-toggler hidden-sm-up" type="button" (click)="isNavbarCollapsed = !isNavbarCollapsed" data-target="#navbarsDefault" aria-controls="navbarsDefault" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon">
+          <svg xmlns="http://www.w3.org/2000/svg"  fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">
+            <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"/>
+          </svg>
+        </span>
+      </button>
+
+      <!-- menu -->
+      <div [ngbCollapse]="isNavbarCollapsed" class="collapse navbar-collapse" id="navbarsDefault">
+        <ul class="navbar-nav mr-auto">
+
+          <!-- Link item Themas -->
+          <li class="nav-item dropdown" ngbDropdown> <!-- @Todo add dropdown class dynamicaly -->
+            <a class="nav-link dropdown-toggle" id="themas" routerLink="/thema" ngbDropdownToggle>Themas</a>
+            <ul class="dropdown-menu" aria-labelledby="themas" ngbDropdownMenu>
+              <li>
+                <a class="dropdown-item " role="menuitem" routerLink="/themas/d99cc223-a017-eb11-a813-000d3abaccb2" (click)="isNavbarCollapsed = true">
+                  <h4 class="mb-0 h5">Datagedrevenlogistiek </h4>
+                </a>
+              </li>
+              <li>
+                <a class="dropdown-item " role="menuitem" routerLink="/themas/d99cc223-a017-eb11-a813-000d3abaccb2" (click)="isNavbarCollapsed = true">
+                  <h4 class="mb-0 h5">Events </h4>
+                </a>
+              </li>
+              <li>
+                <a class="dropdown-item " role="menuitem" routerLink="/themas/d99cc223-a017-eb11-a813-000d3abaccb2" (click)="isNavbarCollapsed = true">
+                  <h4 class="mb-0 h5">leefbare stad </h4>
+                </a>
+              </li>
+            </ul>
+          </li>
+
+
+
+          <!-- Link item Projecten -->
+          <li class="nav-item"> <!-- @Todo add dropdown class dynamicaly -->
+            <a class="nav-link" routerLink="/projecten" (click)="isNavbarCollapsed = true">Projecten</a>
+          </li>
+
+          <!-- Link item Producten -->
+          <li class="nav-item"> <!-- @Todo add dropdown class dynamicaly -->
+            <a class="nav-link"  routerLink="/home" (click)="isNavbarCollapsed = true">Producten</a>
+          </li>
+
+          <!-- Link item Studenten -->
+          <li class="nav-item"> <!-- @Todo add dropdown class dynamicaly -->
+            <a class="nav-link" routerLink="/home" (click)="isNavbarCollapsed = true">Studenten inzet</a>
+          </li>
+
+
+          <!-- Link item Navigator -->
+          <li class="nav-item "> <!-- @Todo add dropdown class dynamicaly -->
+            <a class="nav-link"  routerLink="/LCbieb" (click)="isNavbarCollapsed = true">LCB-ieb</a>
+          </li>
+
+          <!-- Link item Navigator -->
+          <li class="nav-item "> <!-- @Todo add dropdown class dynamicaly -->
+            <a class="nav-link" routerLink="/navigator" (click)="isNavbarCollapsed = true">LCB-navigator</a>
+          </li>
+
+          <!-- Link item Agenda -->
+          <li class="nav-item"> <!-- @Todo add dropdown class dynamicaly -->
+            <a class="nav-link" routerLink="/home" (click)="isNavbarCollapsed = true">Agenda</a>
+          </li>
+
+
+          <!-- Link item Nieuws -->
+          <li class="nav-item"> <!-- @Todo add dropdown class dynamicaly -->
+            <a class="nav-link" routerLink="/nieuws" (click)="isNavbarCollapsed = true">Nieuws</a>
+          </li>
+
+
+          <!-- Link item about -->
+          <li class="nav-item dropdown" ngbDropdown> <!-- @Todo add dropdown class dynamicaly -->
+            <a class="nav-link dropdown-toggle" id="about" routerLink="/about" ngbDropdownToggle>Over ons</a>
+            <ul class="dropdown-menu dropdown-menu-arrow" aria-labelledby="about" ngbDropdownMenu>
+              <li>
+                <a class="dropdown-item " role="menuitem" routerLink="/over-ons" (click)="isNavbarCollapsed = true">
+                  <h4 class="mb-0 h5">Ons verhaal</h4>
+                </a>
+              </li>
+              <li>
+                <a class="dropdown-item " role="menuitem" routerLink="/thema/d99cc223-a017-eb11-a813-000d3abaccb2" (click)="isNavbarCollapsed = true">
+                  <h4 class="mb-0 h5">Onze partners en leden</h4>
+                </a>
+              </li>
+              <li>
+                <a class="dropdown-item " role="menuitem" routerLink="/thema/d99cc223-a017-eb11-a813-000d3abaccb2" (click)="isNavbarCollapsed = true">
+                  <h4 class="mb-0 h5">Onze medewerkers</h4>
+                </a>
+              </li>
+            </ul>
+          </li>
+
+
+
+
+
+
+
+
+
+        </ul>
+      </div>
+    </nav>
+
+  </div>
+
+  <!-- end header fixed-top -->
+</div>

@@ -1,0 +1,101 @@
+.DataGedrevenLogistiek{
+  background-color: #009A96!important;
+}
+
+.LeefbareStad{
+  background-color: #F6A016!important;
+}
+
+.Zorglogistiek{
+  background-color: #C1D100!important;
+}
+
+.Evenementenlogistiek{
+  background-color: #7373B4!important;
+}
+
+.SmartIndustry{
+  background-color: #F6A016!important;
+}
+
+.Multimodaal{
+  background-color: #009FDD!important;
+}
+
+
+.card:hover {
+  transform: translateY(-15px);
+  transition: all 0.3s;
+}
+
+.fa-envelope:hover {
+  color: #FFCB17 !important;
+}
+.fa-linkedin-in:hover {
+  color: #FFCB17 !important;
+}
+
+// Business card
+.hex {
+  position: relative;
+  width: 120px;
+  height: 132px;
+  background-color: #424242;
+  display: flex;
+  -webkit-clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+  clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+}
+
+.HEXimg {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+  padding: 5px;
+
+}
+
+.businesscard{
+  padding: 0rem !important;
+}
+
+.businesscardRow{
+  margin: 0px !important;
+}
+
+.fa-envelope:hover {
+  color: #FFCB17 !important;
+}
+.fa-linkedin-in:hover {
+  color: #FFCB17 !important;
+}
+
+div.hexagon-wrapper {
+  position: relative;
+  width: 120px;
+  height: 132px;
+  display: inline-block;
+  -webkit-clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+  clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+  background-color: white;
+}
+
+.hexagon-wrapper .hexagon {
+  position: relative;
+  width: 89%;
+  height: 89%;
+  display: block;
+  -webkit-clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+  clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+  margin: 7px;
+}
+
+@media (max-width: 576px) {
+  .kaartnaam {
+    margin-left: 130px;
+  }
+  .kaartinfo {
+    margin-left: 130px;
+    margin-top: -75px;
+  }
+}

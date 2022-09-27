@@ -1,0 +1,68 @@
+
+<!-- hero section -->
+<div class="bg-cover mt-n4" style=" background-image:linear-gradient(180deg, rgba(30, 24, 53, 0.4) 0%, rgba(30, 24, 53, 0.4) 90.16%),url('{{ project['banner'].msdyncrm_blobcdnuri }}'); background-size: cover; height: 390px;">
+    <div class="container">
+        <div class="row">
+            <div class="offset-lg-2 col-lg-8 col-md-12 col-12">
+                <div class="text-center py-lg-13 py-13">
+                    <h4 class="text-primary mb-3 font-14 d-inline-block font-weight-semi-bold">Project</h4>
+                    <h1 class="mb-3 display-4 text-white">
+                        {{ project.bhs_name }}
+                    </h1>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- ALGEMEEN -->
+<section id='algemeen' class='scroll_anchor'></section>
+<div class="container-xl mt-3">
+    <div class="row">
+        <div class="col-xl-8 col-12 lead">
+            <div class="page-header">
+                <h2>{{ project.bhs_name }}</h2>
+            </div>
+            <div class="text-justify" [innerHTML]="project.bhs_projectomschrijving | safeHtml:'html'"></div>
+
+
+            <div class="my-4 d-flex">
+                <a *ngIf="project.bhs_externewebsite" class="btn btn-outline-dark mr-4 h-100" href="{{project.bhs_urlexternewebsite}}" target="_blank" rel="noopener noreferrer">Externe Website</a>
+            </div>
+        </div>
+        <!-- projectleider -->
+        <div class="col-xl-4 col-12">
+            <h2 class="mb-3">Projectleider</h2>
+              <app-businesscard></app-businesscard>
+        </div>
+    </div>
+</div>
+
+
+<!-- TEAMS -->
+<section id="teams" class='scroll_anchor'></section>
+<div class="container" *ngIf="project.bhs_urlteams">
+    <div class="row">
+        <div class="offset-lg-1 col-lg-10 col-md-12 col-12">
+            <!-- teams thumbnail -->
+            <div class="card mb-4 mt-n2 border-0">
+                <div class="row no-gutters shadow my-sm-4">
+                    <div class="col-12 col-md-6 rounded-left bg-cover " style="background-image: url(https://mktdplp102neda.azureedge.net/org-c6e9ed9dbeda4108b727be010f53519e/8cb03ef4-8359-eb11-a812-000d3adb1494/3A86SeM6UvNeucfe1fhSMe7ieU3FF7-bdyKjzJRFMzc!); ">
+                        <img src="https://mktdplp102neda.azureedge.net/org-c6e9ed9dbeda4108b727be010f53519e/8cb03ef4-8359-eb11-a812-000d3adb1494/3A86SeM6UvNeucfe1fhSMe7ieU3FF7-bdyKjzJRFMzc!" class=" img-fluid d-md-none invisible" alt="">
+                    </div>
+                    <div class="col-lg-6 col-md-6 col-12 ">
+                        <div class="card-body p-6 border-top border-primary rounded-right border-top-4">
+                            <h2 class="mb-3">Microsoft Teams</h2>
+                            <p>Open de Microsoft Teams omgeving voor dit project</p>
+                            <a href="{{project.bhs_urlteams}}" target="_blank" class="btn btn-primary">Open teams</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- teams thumbnail -->
+        </div>
+    </div>
+</div>
+
+<!-- END TEAMS -->

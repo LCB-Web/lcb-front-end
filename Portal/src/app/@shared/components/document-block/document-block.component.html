@@ -1,0 +1,55 @@
+
+<!-- Whitepaper -->
+<ng-template [ngIf]="document.lcb_typedocument == 'Whitepaper'">
+      <!-- Card -->
+      <div class="px-2 mb-3 mb-lg-0">
+        <a class="card card-inverse shadow" href="" target="_blank">
+          <img class="card-img" src="{{ document.lcb_DocumentAfbeelding }}" alt="Card image">
+          <div class="card-img-overlay">
+            <h4 class="card-title text-white">{{ document.lcb_name }}</h4>
+            <p class="card-text text-white">{{ document.lcb_omschrijving }}</p>
+            <p class="card-text text-primary font-italic"><small>{{document.lcb_typedocument}}</small></p>
+          </div>
+        </a>
+      </div>
+      <!-- End Card -->
+</ng-template>
+
+<!-- Video -->
+<ng-template [ngIf]="document.lcb_typedocument == 'Video'">
+  <!-- VIDEO -->
+  <div class="mb-3 ml-2 mr-2 embed-responsive embed-responsive-16by9">
+    <iframe loading="lazy" class="embed-responsive-item pr-2" [src]="youtube | safeHtml:'resourceUrl'"  frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  </div>
+</ng-template>
+
+<!-- Powerpoint -->
+<ng-template [ngIf]="document.lcb_typedocument == 'Anders'">
+  <!-- Card -->
+    <div class="px-2 mb-3 mb-lg-0">
+      <a class="card card-inverse shadow" href="" target="_blank">
+        <img class="card-img" src="{{ document.lcb_DocumentAfbeelding }}" alt="Card image">
+          <div class="card-img-overlay">
+            <h4 class="card-title text-white">{{ document.lcb_name }}</h4>
+              <p class="card-text text-white">{{ document.lcb_omschrijving }}</p>
+                <p class="card-text text-primary font-italic"><small>{{document.lcb_typedocument}}</small></p>
+          </div>
+      </a>
+    </div>
+  <!-- End Card -->
+</ng-template>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

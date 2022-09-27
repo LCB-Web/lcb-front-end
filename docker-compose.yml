@@ -1,0 +1,60 @@
+version: '3.5'
+
+# To Join any other app setup using another network, change name and set external = true
+networks:
+  default:
+    name: LCB
+    external: false
+
+services:
+  api:
+    container_name: api
+    image: api:1.0.0
+    build:
+      context: ./api
+      dockerfile: Dockerfile
+    command: npm run start:dev
+    environment:
+      - "MONGO_URL=mongodb://mongodb:27017/"
+    ports:
+      - 3000:3000
+      - 9229:9229
+    depends_on:
+      - mongo
+    volumes:
+      - ./api:/usr/src/app
+    restart: unless-stopped
+
+  mongo:
+    container_name: mongo
+    build:
+      context: ./MongoDB
+      dockerfile: Dockerfile
+    restart: always
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: admin-user
+      MONGO_INITDB_ROOT_PASSWORD: admin-password
+      MONGO_INITDB_DATABASE: admin
+    volumes:
+      - ./MongoDB/data:/data/db
+    ports:
+      - 27017:27017
+
+#  angular:
+#    container_name: Portal
+#    build:
+#      context: ./Portal
+#      dockerfile: Dockerfile
+#    ports:
+#      - "4200:4200"
+#    environment:
+#      SHELL: /bin/bash
+#      NODE_ENV: development
+#
+#    entrypoint: ng serve --host 0.0.0.0 --poll 1
+
+
+
+
+
+

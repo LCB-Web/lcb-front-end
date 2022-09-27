@@ -1,0 +1,23 @@
+
+  <div class="col-12" >
+    <div class="card-body businesscard border border-dark rounded" >
+      <div class="row businesscardRow bg-primary align-items-end" style="min-height:80px" [ngClass]="contact.department | removeWhiteSpace">
+        <div class="col-sm-4"></div>
+        <div class="col-sm-8 kaartnaam"><h4>{{contact.firstname}} {{contact.middlename}} {{contact.lastname}}</h4></div>
+      </div>
+      <div class="row businesscardRow " style="min-height:80px">
+        <div class="col-sm-4">
+          <div class="hexagon-wrapper mt-n8">
+            <img class="hexagon" src="{{ contact.lcb_Profielafbeelding.msdyncrm_blobcdnuri }}" alt="some">
+          </div>
+        </div>
+        <div class="col-sm-8 kaartinfo">
+          <div class="row"><h6 class="ml-3 mt-2">{{ contact.jobtitle }}</h6></div>
+          <div class="row">
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+

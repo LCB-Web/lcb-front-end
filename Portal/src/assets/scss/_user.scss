@@ -1,0 +1,561 @@
+//
+// user.scss
+// Use this to write your custom SCSS
+//
+
+body{
+  //padding-top: 130px;
+}
+// None homepage header
+body:not([data-pathname="/home"]) {
+  padding-top: 130px;
+
+  .header {
+    background-color: white;
+
+    .navbar-nav {
+      .nav-item {
+        .nav-link {
+          color: $black !important;
+          // text-shadow: none !important;
+        }
+      }
+    }
+  }
+
+  .search-and-user {
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 132px;
+    z-index: 900;
+  }
+
+  .search-and-user.header-collapse {
+    transition: 0s ease;
+    top: 93px;
+  }
+}
+
+.header {
+  //background-color: $white;
+  border-top: 9px solid $primary;
+
+  .navbar-brand {
+    img {
+      // Logo size
+      height: 80px;
+    }
+  }
+
+  .navbar-nav {
+    .nav-item {
+      .nav-link {
+        color: $white !important;
+        // text-shadow: $dark 2px 0 3px;
+      }
+    }
+  }
+}
+
+.header-btn a {
+  color: white;
+}
+
+// Smaller screens nav
+.header-collapse {
+  background: $white;
+  border-top: none;
+  border-bottom: 4px solid $primary;
+  transition: 0.8s ease;
+
+  .navbar-brand {
+    color: $black;
+
+    img {
+      // Logo Size
+      height: 50px;
+    }
+  }
+
+  .navbar-default.navbar {
+    .navbar-toggler {
+      .icon-bar {
+        background-color: $black !important;
+      }
+    }
+  }
+
+  .navbar-nav {
+    .nav-item {
+      .nav-link {
+        color: $black !important;
+        // text-shadow: none;
+
+        &:hover {
+          color: $gray-600 !important;
+        }
+      }
+    }
+  }
+}
+
+// Search, Username and Login Menu
+.search-bar {
+  a {
+    color: black !important;
+    font-size: 19px !important;
+    font-weight: normal !important;
+
+    &.nav-link.btn:hover {
+      background-color: lighten($color: $primary, $amount: 10);
+    }
+  }
+
+  .btn,
+  input.form-control {
+    border: 1px solid black !important;
+    border-radius: 0 !important;
+    // Login button is otherwise very narrow
+    min-width: 178px;
+  }
+
+  // Search button should have normal width
+  .btn-default {
+    min-width: inherit;
+  }
+
+  input.form-control {
+    border-right: none !important;
+    color: black !important;
+  }
+
+  .fa {
+    color: black !important;
+    font-size: 22px !important;
+  }
+}
+
+@include media-breakpoint-down(md) {
+  .search-bar {
+    .navbar-nav {
+      flex-direction: row;
+    }
+
+    a {
+      &.nav-link.btn {
+        font-size: 1rem !important;
+        //margin-right: 1rem;
+        padding: 4px 0;
+        //width: 190px;
+      }
+    }
+  }
+}
+
+.carousel-item {
+  h1 {
+    text-shadow: $dark 2px 0 10px;
+  }
+
+  .lead {
+    font-size: $h4-font-size;
+    font-weight: $font-weight-bold;
+    text-shadow: $dark 1px 0 1px;
+  }
+}
+
+// Bootstrap 4 - Modal dialog visibility fix
+.fade:not(.show) {
+  opacity: 1;
+}
+
+.modal-dialog {
+  margin-top: 5rem !important;
+}
+
+// Bootstrap 4 - Datepicker fixes
+span.input-group-addon {
+  cursor: pointer;
+  display: inline-block;
+  padding: 0.6rem 1rem;
+}
+
+// Bootstrap 4 - Progress bar fixes
+.progress {
+  margin-bottom: 2rem;
+
+  &.list-group {
+    flex-direction: row;
+  }
+
+  .list-group-item {
+    font-weight: $font-weight-bold;
+  }
+
+  .list-group-item-success {
+    background-color: lighten($color: $success, $amount: 30);
+    color: $text-muted;
+  }
+}
+
+// Icon fixes - Glyphicons aren't included anymore in Bootstrap v4
+
+.glyphicon {
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  display: inline-block;
+  font-style: normal;
+  font-variant: normal;
+  text-rendering: auto;
+  line-height: 1;
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+}
+.glyphicon-chevron-left:before {
+  content: "\f053";
+}
+.glyphicon-chevron-right:before {
+  content: "\f054";
+}
+
+// Increase the top navbar link size on >= md < lg screens
+@include media-breakpoint-between(md, lg) {
+  .header .btn,
+  .header .navbar-default.navbar .navbar-nav .nav-item .nav-link {
+    font-size: 18px;
+  }
+}
+// Increase the top navbar link size on >= lg screens
+@include media-breakpoint-up(lg) {
+  .header .btn,
+  .header .navbar-default.navbar .navbar-nav .nav-item .nav-link {
+    font-size: 19px;
+  }
+}
+
+// Fix tabs
+.nav-tabs {
+  li {
+    @extend .nav-item;
+
+    a {
+      @extend .nav-link;
+      font-weight: bold;
+
+      &.active {
+        @extend .nav-link, .active;
+      }
+    }
+  }
+}
+
+// Fix registration form
+#ContentContainer_MainContent_MainContent_LocalLogin,
+#ContentContainer_MainContent_MainContent_ExternalLogin {
+  width: 50%;
+}
+#ContentContainer_MainContent_MainContent_ExternalLogin > .col-md-6,
+#ContentContainer_MainContent_MainContent_LocalLogin > .col-md-6 {
+  max-width: 100%;
+}
+
+@include media-breakpoint-down(md) {
+  #ContentContainer_MainContent_MainContent_LocalLogin,
+  #ContentContainer_MainContent_MainContent_ExternalLogin {
+    margin-bottom: 2rem;
+    width: 100%;
+  }
+}
+
+// Override Wysiwyg / Rich Text Editor control output
+div[data-wrapper="true"] {
+  font-family: inherit !important;
+  font-size: inherit !important;
+}
+
+// Form vailidation erros were yellow, now red
+.validation-summary.alert.alert-error a {
+  border-bottom: 1px solid $danger;
+  color: $danger;
+  padding-bottom: 2px;
+  text-decoration: none;
+}
+
+// Forms
+fieldset > legend {
+  font-size: $h2-font-size;
+  font-weight: bold;
+}
+
+.crmEntityFormView .cell {
+  // No cell padding left
+  padding-left: 0 !important;
+}
+
+.entity-form {
+  label {
+    font-weight: bold;
+    // margin-top: 1.3rem;
+  }
+
+  .boolean-radio {
+    display: block;
+    margin-top: 1rem;
+  }
+
+  .input-group {
+    .text-muted {
+      display: none;
+    }
+  }
+
+  .input-group > .form-control:not(:last-child) {
+    border-top-right-radius: 0.25rem;
+    border-bottom-right-radius: 0.25rem;
+  }
+}
+
+@include media-breakpoint-down(md) {
+  // Force form tab columns to full width on small screens sizes
+  .tab-column {
+    padding-left: 0 !important;
+    width: 100% !important;
+  }
+}
+
+// Entity lists
+.grid-actions {
+  border-bottom: none !important;
+}
+
+.entitylist-filter-option-text span.input-group-addon {
+  display: none;
+}
+
+.entitylist label {
+  font-weight: bold;
+  margin-top: 1.3rem;
+}
+
+.btn-entitylist-filter-submit {
+  @extend .btn-info;
+}
+
+// LCB Opdrachten Zoeken
+.lcb-opdrachten,
+.lcb-navigator {
+  .entitylist-filter {
+    background-color: $primary;
+    @extend .mb-4;
+    @extend .rounded;
+    padding: 1rem;
+
+    label {
+      color: black;
+      margin-top: 0rem;
+    }
+
+    select,
+    input[type="text"] {
+      border-color: transparent;
+      font-size: 0.9rem;
+    }
+
+    .entitylist-filter-option-group {
+      padding-bottom: 0.8rem;
+    }
+
+    .form-control {
+      height: 2.3rem;
+      padding-bottom: 0.2rem;
+      padding-top: 0.2rem;
+    }
+
+    .h4 {
+      font-size: 1rem;
+    }
+  }
+}
+
+@include media-breakpoint-up(md) {
+  .lcb-opdrachten {
+    .filter-vertical {
+      flex: 0 0 23%; // Normally col-md-3 = 25%
+      max-width: 23%;
+      padding-top: 75px;
+    }
+  }
+}
+
+@include media-breakpoint-down(md) {
+  .lcb-opdrachten {
+    .filter-vertical,
+    .col-md-9 {
+      padding-bottom: 2rem;
+      padding-top: 0;
+      flex: 0 0 100%; // Normally col-md-3 = 25%
+      max-width: 100%;
+    }
+  }
+}
+
+// Notes / file uploads / create button
+.addnote.btn.btn-default {
+  @extend .btn-primary;
+}
+
+.note-actions .col-sm-3 {
+  flex: inherit !important;
+  max-width: inherit !important;
+}
+
+.entity-notes a.addnote {
+  float: left !important;
+}
+
+.entity-notes .note .metadata {
+  display: none !important;
+}
+
+.entity-notes .note .text {
+  line-height: 3;
+}
+
+.entity-notes .note .content {
+  display: flex;
+  flex-direction: row-reverse;
+  flex: 1 !important;
+  max-width: 100% !important;
+
+  & > div {
+    flex: 1;
+
+    &.toolbar {
+      max-width: 3rem;
+    }
+  }
+}
+
+.entity-notes {
+  flex: 1 !important;
+  max-width: 100% !important;
+  padding: 0;
+}
+
+// Pager
+.pager {
+  padding-left: 0;
+  margin: 21px 0;
+  list-style: none;
+  text-align: center;
+}
+.pager:before,
+.pager:after {
+  content: " ";
+  display: table;
+}
+.pager:after {
+  clear: both;
+}
+.pager li {
+  display: inline;
+}
+.pager li.active a {
+  background-color: $primary;
+}
+.pager li > a,
+.pager li > span {
+  display: inline-block;
+  padding: 5px 14px;
+  background-color: white;
+  border: 1px solid $primary;
+  border-radius: 0;
+  color: black;
+}
+.pager li > a:hover,
+.pager li > a:focus {
+  text-decoration: none;
+  background-color: $primary;
+}
+.pager .next > a,
+.pager .next > span {
+  float: right;
+}
+.pager .previous > a,
+.pager .previous > span {
+  float: left;
+}
+.pager .disabled > a,
+.pager .disabled > a:hover,
+.pager .disabled > a:focus,
+.pager .disabled > span {
+  color: #777777;
+  background-color: #fff;
+  cursor: not-allowed;
+}
+
+// Read more links
+.btn-primary-link {
+  border-bottom: 1px solid $link-color;
+  color: $link-color;
+
+  &:hover,
+  &:active {
+    border-bottom: 1px solid black;
+    color: black;
+  }
+}
+
+.primary-link-color {
+  color: $link-color;
+}
+
+.btn-secondary {
+  background-color: $link-color;
+  border-color: $link-color;
+
+  &:hover,
+  &:active {
+    background-color: lighten($color: $link-color, $amount: 5);
+    border-color: lighten($color: $link-color, $amount: 5);
+  }
+}
+
+.btn-linkedin {
+  background-color: $linkedin;
+  border-color: $linkedin;
+  color: white;
+  min-width: 115px;
+
+  sup {
+    top: -0.6em;
+    font-size: 0.5rem;
+  }
+
+  &:hover,
+  &:active {
+    background-color: lighten($color: $linkedin, $amount: 5);
+    border-color: lighten($color: $linkedin, $amount: 5);
+    color: white;
+  }
+}
+
+// Subraster Action buttons
+.toolbar-actions {
+  .btn-info {
+    @extend .btn-primary;
+  }
+}
+
+// Captcha field input
+.captcha-cell input {
+  @extend .text;
+  @extend .form-control;
+  max-width: 150px;
+}
+
+.fixed-top {
+  // make sure the top menu is below the loading shim (z-index 1000)
+  z-index: 999;
+}

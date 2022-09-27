@@ -1,0 +1,231 @@
+<!-- hero section -->
+<div class="bg-cover mt-n4" style=" background-image:linear-gradient(180deg, rgba(30, 24, 53, 0.4) 0%, rgba(30, 24, 53, 0.4) 90.16%),url('{{ thema.banner.msdyncrm_blobcdnuri  }}'); background-size: cover; height: 440px;">
+  <div class="container">
+    <div class="row">
+      <div class="offset-lg-2 col-lg-8 col-md-12 col-12">
+        <div class="text-center py-lg-13 py-13">
+          <h4 class="text-primary mb-3 font-14 d-inline-block font-weight-semi-bold">Thema</h4>
+          <h1 class="mb-3 display-4 text-white">
+            {{ thema.bhs_name }}
+          </h1>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- end hero section -->
+<div class="container-xl">
+<!-- Content -->
+<nav ngbNav #nav="ngbNav"  class="nav-tabs nav-pills-border nav nav-pills nav-justified my-4 mx-1 ">
+
+  <!-- Algemeen -->
+  <ng-container ngbNavItem>
+    <a class="nav-link default font-weight-normal rounded-0 text-dark" ngbNavLink>Algemeen</a>
+    <ng-template ngbNavContent>
+      <!-- Introduction -->
+      <div class="container-xl">
+        <!-- Title -->
+        <div class="page-header">
+          <h1 class="h2">{{ thema.bhs_name }}</h1>
+        </div>
+        <div class="row">
+
+          <!-- Left -->
+          <div class="col-12 col-xl-8">
+            <!-- Thema tekst -->
+            <div class="text-justify" [innerHTML]="thema.bhs_omschrijving| safeHtml:'html'">
+
+            </div>
+            <!-- share buttons -->
+            <div class="my-6">
+              <a *ngIf="thema.bhs_externewebsite" class="btn btn-outline-dark mr-4 h-100" href="{{thema.bhs_urlexternewebsite}}" target="_blank" rel="noopener noreferrer">Externe website</a>
+              <a href="mailto:{{thema.bhs_emailadres}}?subject=Meer informatie over thema:{{ thema.bhs_name}}" class="btn btn-primary mr-4">Neem contact op</a>
+
+            </div>
+          </div>
+
+          <!-- right -->
+          <div class="col-12 col-xl-4">
+
+            <!-- Thema manager -->
+            <ng-container *ngFor="let specialist of thema.specialisten">
+              <div class="col-12" *ngIf="specialist.jobtitle.includes('Themamanager')">
+                <div class="card-body businesscard border border-dark rounded" >
+                  <div class="row businesscardRow bg-primary align-items-end" style="min-height:80px" [ngClass]="specialist.department | removeWhiteSpace">
+                    <div class="col-sm-4"></div>
+                    <div class="col-sm-8 kaartnaam"><h4>{{specialist.firstname}} {{specialist.middlename}} {{specialist.lastname}}</h4></div>
+                  </div>
+                  <div class="row businesscardRow " style="min-height:80px">
+                    <div class="col-sm-4">
+                      <div class="hexagon-wrapper mt-n8">
+                        <img class="hexagon" src="{{ specialist.lcb_Profielafbeelding.msdyncrm_blobcdnuri }}" alt="some">
+                      </div>
+                    </div>
+                    <div class="col-sm-8 kaartinfo">
+                      <div class="row"><h6 class="ml-3 mt-2">{{ specialist.jobtitle }}</h6></div>
+                      <div class="row">
+
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </ng-container>
+
+
+          </div>
+
+        </div>
+      </div>
+
+      <!-- TODAY,TOGHTER,TOMORROW -->
+      <div class="py-6 bg-primary">
+        <div class="container-xl">
+          <div class="row text-dark">
+            <div class="col-12 col-sm-6 col-md-4">
+              <h2>Together</h2>
+              <p>{{thema.bhs_together}}</p>
+            </div>
+
+            <div class="col-12 col-sm-6 col-md-4">
+              <h2>Today</h2>
+              <p>{{thema.bhs_today}}</p>
+            </div>
+
+            <div class="col-12 col-sm-6 col-md-4">
+              <h2>Tomorrow</h2>
+              <p>{{thema.bhs_tomorrow}}</p>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+      <!-- SPECIALISTEN -->
+      <div class="py-6">
+        <div class="container-xl mb-4">
+          <h2 class="mb-3">Specialisten</h2>
+          <div class="row">
+<!--            <app-businesscard class="col-xl-4 col-12 pb-3" *ngFor="let specialist of thema.specialisten" [contact]="specialist"></app-businesscard>-->
+          </div>
+        </div>
+      </div>
+    </ng-template>
+  </ng-container>
+
+  <!-- Projecten -->
+  <ng-container ngbNavItem>
+    <a class="nav-link font-weight-normal rounded-0 text-dark" ngbNavLink>Projecten</a>
+    <ng-template ngbNavContent>
+      <!-- projecten -->
+      <div class="container-xl ">
+        <div class="row">
+          <div class="col-12 text-center">
+            <p class="lead mb-4"><span class="h3">Wij zitten niet stil!</span><br>LCB werkt samen met Brabantse partners aan innovatieve projecten in één van onze zes onderzoeksthema’s. Er is altijd wel een onderwerp van jouw interesse! </p>
+          </div>
+          <app-projecten-block *ngFor="let project of thema.projecten" class="col-lg-4 col-md-6 col-12 mb-4" [project]=project></app-projecten-block>
+        </div>
+      </div>
+    </ng-template>
+  </ng-container>
+
+  <!-- Documenten -->
+  <ng-container ngbNavItem>
+    <a class="nav-link font-weight-normal rounded-0 text-dark" ngbNavLink>Documenten</a>
+    <ng-template ngbNavContent>
+      <div class="container-xl">
+        <div class="row">
+          <div class="col-12 mb-4">
+            <p class="lead mb-4 text-center"><span class="h3">Je weet nooit genoeg.</span><br>Wil je je inlezen in een van onze thema’s? Bekijk dan onze video’s of whitepapers, want je kunt niet genoeg kennis verzamelen! In de besloten portal vind je nog meer. </p>
+              <div class="container-xl">
+                <div class="row">
+                  <app-document-block class="col-sm-4" *ngFor="let document of thema.documenten" [document]="document"></app-document-block>
+                </div>
+              </div>
+          </div>
+        </div>
+      </div>
+    </ng-template>
+  </ng-container>
+
+  <!-- nieuws -->
+  <ng-container ngbNavItem>
+    <a class="nav-link font-weight-normal rounded-0 text-dark" ngbNavLink>Nieuws</a>
+    <ng-template ngbNavContent>
+      <!-- Nieuws -->
+      <div class="container-xl">
+        <div class="row">
+        <p class="lead mb-4 text-center"><span class="h3">Pssst, heb je het al gehoord?</span><br>Wij zijn trots op onze resultaten en daar vertellen wij graag over. Zo ben je altijd op de hoogte van de laatste ontwikkelingen en kan je nieuwe ontwikkelingen doorvertellen aan geïnteresseerden. Zo maken wij samen een nog innovatiever Brabant voor vandaag en morgen! </p>
+        <app-nieuws-block *ngFor="let nieuws of thema.nieuws" class="col-lg-4 col-md-6 col-12 mb-4" [nieuws]="nieuws" ></app-nieuws-block>
+        </div>
+      </div>
+    </ng-template>
+  </ng-container>
+
+  <!-- Agenda -->
+  <ng-container ngbNavItem>
+    <a class="nav-link font-weight-normal rounded-0 text-dark" ngbNavLink>Agenda</a>
+    <ng-template ngbNavContent>
+      <!-- Agenda -->
+
+      <div class=" py-4">
+        <div class="container-xl">
+
+          <div class="row">
+            <div class="col-lg-4 col-md-6 col-12 mb-4" *ngFor="let agenda of thema.evenementen">
+              <div class="card border-0 bg-transparent">
+                <a routerLink="/thema/{{agenda._id}}" class="img-zoom">
+                  <!-- Expected block image size = 350w 400h -->
+                  <img class="rounded img-fluid" src="{{agenda.banner.msdyncrm_blobcdnuri}}" alt="">
+                </a>
+              </div>
+              <div class="card border-0 mr-6">
+                <div class="card-body mt-n13 bg-white rounded-right p-4">
+                  <a routerLink="/thema/{{agenda._id}}">
+                    <h4 class="mb-3">{{agenda.msevtmgt_name}}</h4>
+                  </a>
+                  <p>
+                    <small class="text-muted">
+                      <i class="fas fa-clock mr-2"></i>{{ agenda.msevtmgt_eventstartdate | date: "dd-MM-yyyy" }} van  {{ agenda.msevtmgt_eventstartdate | date: "HH:mm" }} - {{ agenda.msevtmgt_eventenddate | date: "HH:mm" }}<br>
+                      <i class="fa fa-map-marker mr-2"></i>{{ agenda.msevtmgt_building?.msevtmgt_name }}, {{ agenda.msevtmgt_building?.msevtmgt_addressline1 }} {{ agenda.msevtmgt_building?.msevtmgt_city }}
+                    </small>
+                  </p>
+                  <a routerLink="/agenda/{{agenda._id}}" class="btn-primary-link">Lees meer</a>
+                </div>
+              </div>
+            </div>
+
+
+
+          </div>
+
+
+        </div>
+      </div>
+    </ng-template>
+  </ng-container>
+
+
+</nav>
+</div>
+<!-- outlet -->
+<div [ngbNavOutlet]="nav" class="mt-2"></div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
