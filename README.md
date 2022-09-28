@@ -26,6 +26,8 @@ Nadat de dependencies zijn geïnstalleerd kun je het project lanceren door de vo
 
 `ng serve --open`
 
+> Let op! zorg dat je in de Portal map zit terwijl je deze command uitvoert. Dit werkt niet in de hoofdmap of submappen.
+
 Nu kun je in je editor aanpassingen maken die meteen zichtbaar zijn in het project. In de boilerplate kom je in eerste instantie terecht op de homepage. Deze is te vinden onder Portal/src/app/@features/homepage.
 
 Elke pagina in het project bestaat uit een standaard layout die overal wordt toegepast. Deze standaard layout is te vinden onder Portal/src/app/@core/components. Hier zie je een Header (zichtbaar en in dit geval Statisch op elke pagina), Layout (waar alle content van de paginas in komt) & Footer (niet statisch maar staat wel op alle paginas, mogelijk halen we de footer in zijn geheel weg omdat deze ook niet in het design terugkomt.)
