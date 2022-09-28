@@ -4,8 +4,11 @@ Voor het opstarten van het project dien je allereerst de git repo binnen te hale
 Ook ga ik er vanuit dat je de volgende dingen al geinstalleerd hebt op je device;
 
 Angular CLI: 14.x.x (controleer je versie door in je terminal te typen: "ng version")
+
 Node: 14.xx.x (controleer je versie door in je terminal te typen: "node -v")
+
 Package Manager: npm 8.x.x (controleer je versie door in je terminal te typen: "npm -v")
+
 
 **!! De versies hoeven niet precies overeen te komen. Als je een iets nieuwere of oudere versie hebt is dat niet erg.!!**
 
