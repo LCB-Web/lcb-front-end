@@ -7,7 +7,7 @@ Angular CLI: 14.x.x (controleer je versie door in je terminal te typen: "ng vers
 Node: 14.xx.x (controleer je versie door in je terminal te typen: "node -v")
 Package Manager: npm 8.x.x (controleer je versie door in je terminal te typen: "npm -v")
 
-!! De versies hoeven niet precies overeen te komen. Als je een iets nieuwere of oudere versie hebt is dat niet erg.!!
+**!! De versies hoeven niet precies overeen te komen. Als je een iets nieuwere of oudere versie hebt is dat niet erg.!!**
 
 Vervolgens is het van belang dat je in je terminal met npm/yarn de juiste node_modules/dependencies binnen haalt.
 
@@ -15,13 +15,13 @@ dit doe je door in je terminal te navigeren naar de "Portal" map. dat doe je doo
 
 Zodra je in de juiste map zit haal je de juiste dependencies/node_modules binnen door in je terminal te typen;
 
-"npm i"
+`npm i`
 
 (als je errors krijgt dat je geen rechten hebt zet er dan sudo voor op mac, op windows moet je je terminal als administrator openen)
 
 Nadat de dependencies zijn geïnstalleerd kun je het project lanceren door de volgende command te typen; 
 
-"ng serve --open"
+`ng serve --open`
 
 Nu kun je in je editor aanpassingen maken die meteen zichtbaar zijn in het project. In de boilerplate kom je in eerste instantie terecht op de homepage. Deze is te vinden onder Portal/src/app/@features/homepage.
 
