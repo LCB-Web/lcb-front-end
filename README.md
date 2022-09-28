@@ -10,7 +10,7 @@ Node: 14.xx.x (controleer je versie door in je terminal te typen: "node -v")
 Package Manager: npm 8.x.x (controleer je versie door in je terminal te typen: "npm -v")
 
 
-**!! De versies hoeven niet precies overeen te komen. Als je een iets nieuwere of oudere versie hebt is dat niet erg.!!**
+> **!! De versies hoeven niet precies overeen te komen. Als je een iets nieuwere of oudere versie hebt is dat niet erg.!!**
 
 Vervolgens is het van belang dat je in je terminal met npm/yarn de juiste node_modules/dependencies binnen haalt.
 
@@ -20,7 +20,7 @@ Zodra je in de juiste map zit haal je de juiste dependencies/node_modules binnen
 
 `npm i`
 
-(als je errors krijgt dat je geen rechten hebt zet er dan sudo voor op mac, op windows moet je je terminal als administrator openen)
+> Als je errors krijgt dat je geen rechten hebt zet er dan sudo voor op mac, op windows moet je je terminal als administrator openen
 
 Nadat de dependencies zijn geïnstalleerd kun je het project lanceren door de volgende command te typen; 
 
