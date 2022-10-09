@@ -7,12 +7,14 @@ import { AppComponent } from './app.component';
 
 import { coreModule } from './@core/core.module';
 import {NgbModule} from "@ng-bootstrap/ng-bootstrap";
+import { EventsComponent } from './events/events.component';
 
 
 
 @NgModule({
     declarations: [
         AppComponent,
+        EventsComponent,
 
     ],
     imports: [

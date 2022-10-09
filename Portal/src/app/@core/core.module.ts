@@ -8,10 +8,12 @@ import { LayoutComponent } from './components/layout/layout.component';
 import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
 import {NgbCollapseModule, NgbModule} from "@ng-bootstrap/ng-bootstrap";
+import { EventsComponent } from './components/events/events.component';
+import { BlogComponent } from './components/blog/blog.component';
 
 
 @NgModule({
-  declarations: [LayoutComponent, HeaderComponent, FooterComponent],
+  declarations: [LayoutComponent, HeaderComponent, FooterComponent, EventsComponent, BlogComponent],
   imports: [CommonModule, RouterModule, NgbCollapseModule, NgbModule]
 })
 export class coreModule {
