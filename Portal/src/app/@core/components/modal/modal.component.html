@@ -1,1 +1,25 @@
-<div class="styled-modal"></div>
+<div class="styled-modal">
+  <div class="styled-user-panel" [class.large]="large" [class.small]="!large">
+    <label (click)="openPanel()" class="styled-hamburger">
+      <svg width="60px" height="60px">
+        <image
+          xlink:href="../../../../assets/svg/hamburger.svg"
+          src="yourfallback.png"
+          width="50px"
+          height="100%"
+        />
+      </svg>
+      <ng-container *ngIf="visible">
+        <div class="panel-content">
+          <h4>HIGHLIGHT OF THE WEEK</h4>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse
+            tempore aut molestiae, unde non soluta! A, nesciunt. Earum facere
+            totam error, nam placeat, quia, veritatis aspernatur voluptate vitae
+            fugit odit.
+          </p>
+        </div>
+      </ng-container>
+    </label>
+  </div>
+</div>
