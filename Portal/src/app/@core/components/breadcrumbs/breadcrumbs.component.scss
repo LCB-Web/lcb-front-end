@@ -1,0 +1,38 @@
+.breadcrumb-divider {
+  color: #dddddd;
+
+  svg {
+    width: 0.6rem;
+    margin: 0 0.6rem;
+  }
+}
+.breadcrumb-item {
+  left: 4rem;
+  top: 9rem;
+  position: fixed;
+  cursor: pointer;
+  display: inline-block;
+
+  &:not(:hover) {
+    color: inherit;
+  }
+
+  svg {
+    width: 1.2rem;
+    height: 1.2rem;
+  }
+
+  &.breadcrumb__back {
+    display: inline-flex;
+    align-items: center;
+    margin-bottom: 0.8rem;
+    padding: 0.4rem 0.8rem;
+    border: 1px solid currentColor;
+
+    svg {
+      width: 1.4rem;
+      height: 1.4rem;
+      margin-right: 0.4rem;
+    }
+  }
+}
