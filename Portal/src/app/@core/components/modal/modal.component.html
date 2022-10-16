@@ -1,4 +1,16 @@
 <div class="styled-modal">
+  <div class="search">
+    <input type="text" />
+    <label class="hex-yellow-search">
+      <svg height="4rem">
+        <image
+          xlink:href="../../../../assets/svg/hexa-yellow.svg"
+          src="yourfallback.png"
+          height="100%"
+        />
+      </svg>
+    </label>
+  </div>
   <div class="styled-user-panel" [class.large]="large" [class.small]="!large">
     <label (click)="openPanel()" class="styled-hamburger">
       <svg width="60px" height="60px">
