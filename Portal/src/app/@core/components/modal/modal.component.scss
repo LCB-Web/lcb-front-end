@@ -1,0 +1,16 @@
+.styled-modal {
+  display: flex;
+  flex-direction: row;
+  background-color: white;
+  position: fixed;
+  justify-content: space-around;
+  align-items: flex-end;
+  border-radius: 2rem 0 0 2rem;
+  box-shadow: 2px 2px 12px rgb(0 0 0 / 30%);
+  overflow: hidden;
+  height: 1024px;
+  max-height: 96%;
+  max-width: 80%;
+  width: 1800px;
+  transform: translate(2%, 2%);
+}
