@@ -8,7 +8,7 @@ body{
 }
 // None homepage header
 body:not([data-pathname="/home"]) {
-  padding-top: 130px;
+  //padding-top: 130px;
 
   .header {
     background-color: white;
