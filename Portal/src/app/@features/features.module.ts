@@ -5,7 +5,9 @@ import { featuresRoutingModule } from './features-routing.module';
 
 
 @NgModule({
-  declarations: [],
+  declarations: [
+    
+  ],
   imports: [
     CommonModule,
     featuresRoutingModule

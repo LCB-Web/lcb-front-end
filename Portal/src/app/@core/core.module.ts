@@ -8,10 +8,11 @@ import { LayoutComponent } from './components/layout/layout.component';
 import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
 import {NgbCollapseModule, NgbModule} from "@ng-bootstrap/ng-bootstrap";
+import { FilterPanelComponent } from './components/filter-panel/filter-panel.component';
 
 
 @NgModule({
-  declarations: [LayoutComponent, HeaderComponent, FooterComponent],
+  declarations: [LayoutComponent, HeaderComponent, FooterComponent, FilterPanelComponent],
   imports: [CommonModule, RouterModule, NgbCollapseModule, NgbModule]
 })
 export class coreModule {

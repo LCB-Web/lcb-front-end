@@ -1,0 +1,93 @@
+.container {
+  display: flex;
+  flex-direction: row;
+  max-width: 100%;
+  height: 100%;
+  padding-left: 0;
+  position: relative;
+  z-index: 2;
+}
+
+.panel {
+  display: flex;
+  flex-direction: column;
+  padding-top: 4rem;
+  padding-left: 2rem;
+  align-items: flex-start;
+  background-color: white;
+  color: black;
+  width: 250px;
+  height: 100%;
+}
+
+.panel-item {
+  padding-bottom: 2rem;
+  font-size: 14px;
+  h3 {
+    font-size: 20px;
+  }
+}
+
+.hex-yellow {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
+  gap: 1rem;
+}
+
+.input-year {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  input {
+    border-color: yellow;
+    border-width: 1px;
+    width: 80px;
+  }
+}
+
+.radio-form {
+  display: flex;
+  flex-direction: column;
+}
+.radio {
+  display: flex;
+  justify-content: row;
+  padding: 0px 10px;
+  cursor: pointer;
+  input {
+    display: none;
+  }
+}
+
+.radio span {
+  display: flex;
+  align-content: center;
+  line-height: 15px;
+}
+
+.radio span:before,
+.radio span:after {
+  content: "";
+}
+
+.radio span::before {
+  content: url(../../../../assets/svg/hexa.svg);
+  display: flex;
+  margin-right: 10px;
+  height: 10px;
+}
+
+.radio span::after {
+  display: flex;
+  width: 14px;
+  height: 14px;
+  transition: 300ms;
+  opacity: 0;
+}
+
+.radio input:checked + span::before {
+  opacity: 1;
+  content: url(../../../../assets/svg/hexa-black.svg);
+}
