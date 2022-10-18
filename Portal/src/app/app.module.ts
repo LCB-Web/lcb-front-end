@@ -21,8 +21,6 @@ import {NgbModule} from "@ng-bootstrap/ng-bootstrap";
         NgbModule,
         AppRoutingModule,
         coreModule,
-
-
     ],
     providers: [],
     bootstrap: [AppComponent]
