@@ -12,10 +12,14 @@
     </label>
     <div class="app-breadcrumbs"></div>
   </div>
-  <section class="main-section">
-    <h1>NEW READS</h1>
-    <div class="section-bottom-line"></div>
-  </section>
+
+  <div *ngIf="display">
+    <section class="main-section">
+      <h1>NEW READS</h1>
+      <div class="section-bottom-line"></div>
+    </section>
+  </div>
+
   <div class="styled-user-panel" [class.large]="large" [class.small]="!large">
     <label (click)="openPanel()" class="styled-hamburger">
       <svg width="60px" height="60px">

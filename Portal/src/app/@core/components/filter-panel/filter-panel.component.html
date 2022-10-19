@@ -2,7 +2,7 @@
   <div class="panel">
     <div class="panel-item">
       <h3>THEMA</h3>
-      <label ng-click="selectTheme()" id="multimodaal"class="hex-yellow">
+      <div (click)="getThemeID($event)" id="multimodaal" class="hex-yellow">
         <svg width="40px" height="40px">
           <image
             xlink:href="../../../../assets/svg/hexa-yellow.svg"
@@ -12,8 +12,8 @@
           />
         </svg>
         <span>Multimodaal</span>
-      </label>
-      <label class="hex-yellow">
+      </div>
+      <div (click)="getThemeID($event)" id="smart-industrie" class="hex-yellow">
         <svg width="40px" height="40px">
           <image
             xlink:href="../../../../assets/svg/hexa-yellow.svg"
@@ -23,8 +23,8 @@
           />
         </svg>
         <span>Smart industrie</span>
-      </label>
-      <label class="hex-yellow">
+      </div>
+      <div (click)="getThemeID($event)" id="leefbare-stad" class="hex-yellow">
         <svg width="40px" height="40px">
           <image
             xlink:href="../../../../assets/svg/hexa-yellow.svg"
@@ -34,8 +34,8 @@
           />
         </svg>
         <span>Leefbare Stad</span>
-      </label>
-      <label class="hex-yellow">
+      </div>
+      <div (click)="getThemeID($event)" id="zorglogistiek" class="hex-yellow">
         <svg width="40px" height="40px">
           <image
             xlink:href="../../../../assets/svg/hexa-yellow.svg"
@@ -45,8 +45,12 @@
           />
         </svg>
         <span>Zorglogistiek</span>
-      </label>
-      <label class="hex-yellow">
+      </div>
+      <div
+        (click)="getThemeID($event)"
+        id="evenementen-logistiek"
+        class="hex-yellow"
+      >
         <svg width="40px" height="40px">
           <image
             xlink:href="../../../../assets/svg/hexa-yellow.svg"
@@ -56,8 +60,8 @@
           />
         </svg>
         <span>Evenementen logistiek</span>
-      </label>
-      <label class="hex-yellow">
+      </div>
+      <div (click)="getThemeID($event)" id="data-logistiek" class="hex-yellow">
         <svg width="40px" height="40px">
           <image
             xlink:href="../../../../assets/svg/hexa-yellow.svg"
@@ -67,13 +71,13 @@
           />
         </svg>
         <span>Data logistiek</span>
-      </label>
+      </div>
     </div>
     <div class="panel-item">
       <h3>TYPE</h3>
       <div class="radio-form">
         <label class="radio">
-          <input type="radio" name="radio" />
+          <input (click)="onItemChange($event)" type="radio" id="whitepaper" />
           <span>Whitepaper</span>
         </label>
         <label class="radio">
