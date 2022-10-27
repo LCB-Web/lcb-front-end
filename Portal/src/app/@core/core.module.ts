@@ -15,6 +15,7 @@ import { BlogComponent } from './components/blog/blog.component';
 @NgModule({
   declarations: [LayoutComponent, HeaderComponent, FooterComponent, EventsComponent, BlogComponent],
   imports: [CommonModule, RouterModule, NgbCollapseModule, NgbModule]
+
 })
 export class coreModule {
   constructor(@Optional() @SkipSelf() parentModule: coreModule) {

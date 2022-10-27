@@ -1,0 +1,131 @@
+<div class="container">
+  <div class="panel">
+    <div class="panel-item">
+      <h3>THEMA</h3>
+      <div (click)="getThemeID($event)" id="multimodaal" class="hex-yellow">
+        <svg width="40px" height="40px">
+          <image
+            xlink:href="../../../../assets/svg/hexa-yellow.svg"
+            src="yourfallback.png"
+            width="40px"
+            height="100%"
+          />
+        </svg>
+        <span>Multimodaal</span>
+      </div>
+      <div (click)="getThemeID($event)" id="smart-industrie" class="hex-yellow">
+        <svg width="40px" height="40px">
+          <image
+            xlink:href="../../../../assets/svg/hexa-yellow.svg"
+            src="yourfallback.png"
+            width="40px"
+            height="100%"
+          />
+        </svg>
+        <span>Smart industrie</span>
+      </div>
+      <div (click)="getThemeID($event)" id="leefbare-stad" class="hex-yellow">
+        <svg width="40px" height="40px">
+          <image
+            xlink:href="../../../../assets/svg/hexa-yellow.svg"
+            src="yourfallback.png"
+            width="40px"
+            height="100%"
+          />
+        </svg>
+        <span>Leefbare Stad</span>
+      </div>
+      <div (click)="getThemeID($event)" id="zorglogistiek" class="hex-yellow">
+        <svg width="40px" height="40px">
+          <image
+            xlink:href="../../../../assets/svg/hexa-yellow.svg"
+            src="yourfallback.png"
+            width="40px"
+            height="100%"
+          />
+        </svg>
+        <span>Zorglogistiek</span>
+      </div>
+      <div
+        (click)="getThemeID($event)"
+        id="evenementen-logistiek"
+        class="hex-yellow"
+      >
+        <svg width="40px" height="40px">
+          <image
+            xlink:href="../../../../assets/svg/hexa-yellow.svg"
+            src="yourfallback.png"
+            width="40px"
+            height="100%"
+          />
+        </svg>
+        <span>Evenementen logistiek</span>
+      </div>
+      <div (click)="getThemeID($event)" id="data-logistiek" class="hex-yellow">
+        <svg width="40px" height="40px">
+          <image
+            xlink:href="../../../../assets/svg/hexa-yellow.svg"
+            src="yourfallback.png"
+            width="40px"
+            height="100%"
+          />
+        </svg>
+        <span>Data logistiek</span>
+      </div>
+    </div>
+    <div class="panel-item">
+      <h3>TYPE</h3>
+      <div class="radio-form">
+        <label class="radio">
+          <input (click)="onItemChange($event)" type="radio" id="whitepaper" />
+          <span>Whitepaper</span>
+        </label>
+        <label class="radio">
+          <input type="radio" name="radio" />
+          <span>Video</span>
+        </label>
+        <label class="radio">
+          <input type="radio" name="radio" />
+          <span>Blog</span>
+        </label>
+        <label class="radio">
+          <input type="radio" name="radio" />
+          <span>Rapport</span>
+        </label>
+        <label class="radio">
+          <input type="radio" name="radio" />
+          <span> Boek</span>
+        </label>
+        <label class="radio">
+          <input type="radio" name="radio" />
+          <span> Artikel</span>
+        </label>
+      </div>
+    </div>
+    <div class="panel-item">
+      <h3>PUBLICATIEJAAR</h3>
+      <div class="input-year">
+        <input placeholder="Van" type="text" />
+        <input placeholder="Tot" type="text" />
+      </div>
+    </div>
+    <div class="panel-item">
+      <h3>LENGTE</h3>
+    </div>
+    <div class="panel-item">
+      <h3>NOMINATIE/PRIJS</h3>
+      <label class="radio">
+        <input type="radio" name="radio" />
+        <span>Nominatie/prijs</span>
+      </label>
+    </div>
+    <div class="panel-item">
+      <h3>SORTEREN OP</h3>
+      <select id="sort">
+        <option value="meest_relevant">Meest relevant</option>
+      </select>
+    </div>
+  </div>
+  <div class="app-modal"></div>
+  <div class="app-user-panel"></div>
+</div>

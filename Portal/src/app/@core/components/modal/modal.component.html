@@ -1,0 +1,46 @@
+<div class="styled-modal">
+  <div class="search">
+    <input type="text" />
+    <label class="hex-yellow-search">
+      <svg height="4rem">
+        <image
+          xlink:href="../../../../assets/svg/hexa-yellow.svg"
+          src="yourfallback.png"
+          height="100%"
+        />
+      </svg>
+    </label>
+    <div class="app-breadcrumbs"></div>
+  </div>
+
+  <div *ngIf="display">
+    <section class="main-section">
+      <h1>NEW READS</h1>
+      <div class="section-bottom-line"></div>
+    </section>
+  </div>
+
+  <div class="styled-user-panel" [class.large]="large" [class.small]="!large">
+    <label (click)="openPanel()" class="styled-hamburger">
+      <svg width="60px" height="60px">
+        <image
+          xlink:href="../../../../assets/svg/hamburger.svg"
+          src="yourfallback.png"
+          width="50px"
+          height="100%"
+        />
+      </svg>
+      <ng-container *ngIf="visible">
+        <div class="panel-content">
+          <h4>HIGHLIGHT OF THE WEEK</h4>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse
+            tempore aut molestiae, unde non soluta! A, nesciunt. Earum facere
+            totam error, nam placeat, quia, veritatis aspernatur voluptate vitae
+            fugit odit.
+          </p>
+        </div>
+      </ng-container>
+    </label>
+  </div>
+</div>
