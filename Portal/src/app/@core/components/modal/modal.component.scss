@@ -103,3 +103,16 @@
   height: 1.5rem;
   background-color: yellow;
 }
+
+.hexagon_big {
+  margin-top: -300px;
+}
+
+.app-events {
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  left: 3rem;
+  top: 40rem;
+  width: 100%;
+}
