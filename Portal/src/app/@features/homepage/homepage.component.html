@@ -1,19 +1,131 @@
-<!-- Carousel -->
-<div class="carousel slide mt-n4" data-ride="carousel">
-    <div class="carousel-inner" >
-        <div class="carousel-item active" >
-            <div style="height: 100% !important; object-fit: cover; background-image: linear-gradient(180deg, rgba(30, 24, 53, 0.2) 12%, rgba(30, 24, 53, 0.1) 90.16%), url('../../../assets/images/slide4.jpg'); background-size: cover; background-repeat: no-repeat; background-position: center;">
-                <div class="container">
+<header>
+    <div class="header-container">
+        <div class="row search">
+            <div class="col-6 input">
+            
+            </div>
+    
+            <!-- <div class="col-1">
+                scroll
+            </div> -->
+    
+            <div class="col-3">
+                <a class="search-button" href="">
+                    <i class="fas fa-search"></i>
+                </a>
+            </div>
+        </div> 
+    </div>
+</header>
+
+
+<div class="content-page">
+    <div class="container">
+        <div class="row">
+            <div class="col-2">
+                filters
+            </div>
+
+            <div class="col-10">
+                <div class="notepad-container container">
                     <div class="row">
-                        <div class="offset-xl-1 col-xl-10 col-md-12 col-12">
-                            <div class="py-13 pt-lg-16 pb-lg-14 text-center text-light">
-                                <h1 class="display-4 mb-2 font-weight-bold text-white" style="text-shadow: 2px 2px 8px #595454;">
-                                    Wij zijn Logistics Community Brabant
-                                </h1>
-                                <p class="px-lg-14 mb-4 lead">
-                                    Wij brengen Ondernemers, Onderwijs, Overheid en Onderzoek bij elkaar om samen te komen tot logistieke innovaties in Noord-Brabant voor vandaag en morgen.
-                                </p>
-                                <a href="https://www.lcb.nu/over-ons/" class="btn btn-primary text-white">Lees Meer</a>
+                        <div class="col-11">
+
+                            
+
+                            <section id="breadcrumbs">
+                                breadcrumbs
+                            </section>
+
+                            <section id="new-reads">
+                                <div class="row">
+                                    <!-- <swiper-event></swiper-event> -->
+                                    <div class="col-4">
+                                        <h2>New Reads</h2>
+                                        <h5>Climate partnerschips</h5>
+                                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry’s standard dummy text ever since the 1500s, when an unknown printer took a galley. 
+                                    </div>
+                                    <div class="col-8">
+                                        Covers
+                                    </div>
+
+                                     <div class="col-12">
+                                        <div class="divider-big"></div>
+                                    </div>
+                                </div>
+                            </section>
+                           
+                            <div class="row">
+                                <div class="col-2">
+                                    <h2 class="subtitle rotate">Zorg voor anderen</h2>
+                                </div>
+
+                                <div class="col-10">
+                                      <!-- <app-video></app-video> -->
+                                      <section>
+                                        <div class="row">
+                                            <div id="video-block">
+                                                <h5>Kijk naar interessante gesprekken</h5>
+                                            
+                                            </div>
+                                        </div>
+                                    </section>
+
+                                    <!-- <app-whitepaper></app-whitepaper> -->
+                                    <section>
+                                        <div class="row">
+                                            <div id="paper-block">
+                                                <h5>Voer voor de grondige onderzoeker</h5>
+                                            
+                                            </div>
+                                        </div>
+                                    </section>
+
+                                    <!-- <app-event></app-event> -->
+                                    <section>
+                                        <div class="row">
+                                            <div id="event-block">
+                                                <h5>In de buurt</h5>
+                                                <div class="image-overlay">
+                                                    <div class="image">image</div>
+                                                </div>
+                                            
+                                                <div class="text-block">
+                                                    <div class="title"> Zorgtotaal - zorgbeurs 2022</div>
+                                                    <div class="subtitle"> 21 juni 2022</div>
+                                                    <div class="text">Bijeenkomst van kleinschalige zorgaanbieders en innovatieve zorgdigitalisering</div>
+                                                </div>
+                                            
+                                            </div>
+                                        </div>
+                                    </section>
+
+                                    <!-- <app-blog></app-blog> -->
+                                    <section>
+                                        <div class="row">
+                                            <div id="blog-block">
+                                                <h5>Deel jouw gedachten</h5>
+                                            
+                                            </div>
+                                        </div>
+                                    </section>
+
+
+                                </div>
+                            </div>
+
+                                
+
+
+                            
+                        </div>
+
+                        
+
+
+                        <div class="col-1 bg-primary side-menu">
+                            <div class="avatar">
+                                <img class="avatar-img" src="lcb-front-end/Portal/src/assets/images/Stockimages/157765614-profile-picture-of-smiling-indian-female-isolated-on-grey-studio-background-show-optimism-and-positi.jpg" alt="avatar">
                             </div>
                         </div>
                     </div>
@@ -23,62 +135,3 @@
     </div>
 </div>
 
-<!-- Nieuws -->
-<div class="container-xl mt-5">
-    <h2 class="text-center mb-3"> Laatste nieuws </h2>
-    <div class="row">
-        <app-nieuws-block class="col-sm-4" *ngFor="let Nieuws of nieuws | async" [nieuws]=Nieuws ></app-nieuws-block>
-    </div>
-</div>
-
-
-<!-- agenda -->
-<div class="py-4 bg-primary">
-    <div class="container-xl">
-        <div class="row">
-            <div class="offset-xl-3 col-xl-6 col-md-12 col-12">
-                <div class="text-center text-white">
-                    <h2 class="h1 text-white">Agenda</h2>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-<div class="bg-primary pb-4 pt-0">
-    <div class="container-xl">
-
-        <div class="row">
-            <div class="col-sm-4" *ngFor="let agenda of agendas">
-                <div class="card border-0 bg-transparent">
-                    <a href="" class="img-zoom">
-                        <img class="rounded img-fluid" src="{{ agenda.banner.msdyncrm_blobcdnuri }}" alt="">
-                    </a>
-                </div>
-                <div class="card border-0 mr-6">
-                    <div class="card-body mt-n13 bg-white rounded-right p-4">
-                        <a href="">
-                            <h4 class="mb-3" title="{{ agenda.msevtmgt_name }}">{{ agenda.msevtmgt_name }}</h4>
-                        </a>
-                        <p>
-                            <small class="text-muted">
-                                <i class="fas fa-clock mr-2"></i>{{ agenda.msevtmgt_eventstartdate | date: "dd-MM-yyyy" }} van  {{ agenda.msevtmgt_eventstartdate | date: "HH:mm" }} - {{ agenda.msevtmgt_eventenddate | date: "HH:mm" }}<br>
-                                <i class="fa fa-map-marker mr-2"></i>{{ agenda.msevtmgt_building.msevtmgt_name }}, {{ agenda.msevtmgt_building.msevtmgt_addressline1}} {{agenda.msevtmgt_building.msevtmgt_city}}
-                            </small>
-                        </p>
-                        <a href="{{ agenda }}" class="btn-primary-link">Lees meer</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-    </div>
-</div>
-
-
-<!-- Thema -->
-<div class="container-xl">
-    <h2 class="text-center mb-3"> Thema's </h2>
-    <div class="row">
-        <app-thema-block class="col-sm-4" *ngFor="let thema of themas | async" [thema]=thema></app-thema-block>
-    </div>
-</div>

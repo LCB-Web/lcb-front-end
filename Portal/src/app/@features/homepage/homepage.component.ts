@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-
 import {ThemaService} from "../../@shared/services/thema.service";
 import {NieuwsService} from "../../@shared/services/nieuws.service";
 import {AgendaService} from "../../@shared/services/agenda.service";
