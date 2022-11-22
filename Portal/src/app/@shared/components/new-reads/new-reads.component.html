@@ -1,0 +1,27 @@
+<section id="new-reads">
+    <div class="row">
+        <div class="col-4">
+            <h2>New Reads</h2>
+            <h5>Climate partnerschips</h5>
+            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry’s standard dummy text ever since the 1500s, when an unknown printer took a galley. 
+        </div>
+        <div class="col-8">
+            <swiper
+      [config]="this.config"
+      (swiper)="onSwiper($event)"
+      (slideChange)="onSlideChange()"
+    >
+      <ng-template swiperSlide>Slide 1</ng-template>
+      <ng-template swiperSlide>Slide 2</ng-template>
+      <ng-template swiperSlide>Slide 3</ng-template>
+      <ng-template swiperSlide>Slide 4</ng-template>
+      <ng-template swiperSlide>Slide 5</ng-template>
+      <ng-template swiperSlide>Slide 6</ng-template>
+    </swiper>
+        </div>
+
+         <div class="col-11">
+            <div class="divider-big"></div>
+        </div>
+    </div>
+</section>
