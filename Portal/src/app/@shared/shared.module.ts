@@ -9,6 +9,7 @@ import { ProjectenBlockComponent } from './components/projecten-block/projecten-
 import { DocumentBlockComponent } from './components/document-block/document-block.component';
 import {SplitLastPipe} from "./pipes/splitlast.pipe";
 import { BusinesscardComponent } from './components/businesscard/businesscard.component';
+import { FilterPanelComponent } from './components/filter-panel/filter-panel.component';
 
 
 
@@ -21,7 +22,8 @@ import { BusinesscardComponent } from './components/businesscard/businesscard.co
       RemoveWhiteSpacePipe,
       ProjectenBlockComponent,
       DocumentBlockComponent,
-      BusinesscardComponent
+      BusinesscardComponent,
+      FilterPanelComponent,
   ],
   imports: [
     CommonModule,
@@ -35,7 +37,8 @@ import { BusinesscardComponent } from './components/businesscard/businesscard.co
       SafeHtmlPipe,
       RemoveWhiteSpacePipe,
     SplitLastPipe,
-    BusinesscardComponent
+    BusinesscardComponent,
+    FilterPanelComponent
   ]
 })
 export class SharedModule { }
