@@ -1,3 +1,5 @@
+
+
 //
 // user.scss
 // Use this to write your custom SCSS
@@ -558,4 +560,19 @@ fieldset > legend {
 .fixed-top {
   // make sure the top menu is below the loading shim (z-index 1000)
   z-index: 999;
+}
+
+
+.container {
+  width: 100%;
+  padding-right: 65px;
+  padding-left: 65px;
+  margin-right: auto;
+  margin-left: auto;
+
+    @media (max-width: 768px) {
+      padding: 0 !important;
+      margin: 0 !important;
+      max-width: 100% !important;
+  }
 }

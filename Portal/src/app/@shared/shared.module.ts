@@ -1,4 +1,5 @@
 import { NgModule } from '@angular/core';
+import { SwiperModule } from 'swiper/angular';
 import { CommonModule } from '@angular/common';
 import { NieuwsBlockComponent } from './components/nieuws-block/nieuws-block.component';
 import { RouterModule } from "@angular/router";
@@ -9,6 +10,11 @@ import { ProjectenBlockComponent } from './components/projecten-block/projecten-
 import { DocumentBlockComponent } from './components/document-block/document-block.component';
 import { SplitLastPipe} from "./pipes/splitlast.pipe";
 import { BusinesscardComponent } from './components/businesscard/businesscard.component';
+import { NewReadsComponent } from './components/new-reads/new-reads.component';
+import { VideoSliderComponent } from './components/video-slider/video-slider.component';
+import { WhitepaperSliderComponent } from './components/whitepaper-slider/whitepaper-slider.component';
+import { EventComponent } from './components/event/event.component';
+import { BlogComponent } from './components/blog/blog.component';
 
 
 
@@ -21,21 +27,32 @@ import { BusinesscardComponent } from './components/businesscard/businesscard.co
       RemoveWhiteSpacePipe,
       ProjectenBlockComponent,
       DocumentBlockComponent,
-      BusinesscardComponent
+      BusinesscardComponent,
+      NewReadsComponent,
+      VideoSliderComponent,
+      WhitepaperSliderComponent,
+      EventComponent,
+      BlogComponent,
   ],
   imports: [
     CommonModule,
-    RouterModule
+    RouterModule,
+    SwiperModule,
   ],
   exports: [
-      NieuwsBlockComponent,
-      ThemaBlockComponent,
-      ProjectenBlockComponent,
+    NieuwsBlockComponent,
+    ThemaBlockComponent,
+    ProjectenBlockComponent,
     DocumentBlockComponent,
-      SafeHtmlPipe,
-      RemoveWhiteSpacePipe,
+    SafeHtmlPipe,
+    RemoveWhiteSpacePipe,
     SplitLastPipe,
-    BusinesscardComponent
+    BusinesscardComponent,
+    NewReadsComponent,
+    VideoSliderComponent,
+    WhitepaperSliderComponent,
+    EventComponent,
+    BlogComponent,
   ]
 })
 export class SharedModule { }

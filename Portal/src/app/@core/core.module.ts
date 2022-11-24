@@ -14,6 +14,7 @@ import { BreadcrumbsComponent } from './components/breadcrumbs/breadcrumbs.compo
 import { EventComponent } from './components/event/event.component';
 
 
+
 @NgModule({
   declarations: [
     LayoutComponent,
@@ -22,13 +23,13 @@ import { EventComponent } from './components/event/event.component';
      FilterPanelComponent, 
      ModalComponent, 
      BreadcrumbsComponent, 
-     EventComponent
+     EventComponent, 
     ],
   imports: [
     CommonModule, 
     RouterModule, 
     NgbCollapseModule, 
-    NgbModule
+    NgbModule,
   ],
   exports: [
     LayoutComponent,

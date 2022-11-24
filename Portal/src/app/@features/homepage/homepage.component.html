@@ -1,20 +1,20 @@
 <header>
     <div class="header-container">
-        <div class="row search">
+        <!-- <div class="row search">
             <div class="col-6 input">
             
             </div>
     
-            <!-- <div class="col-1">
+            <div class="col-1">
                 scroll
-            </div> -->
+            </div>
     
             <div class="col-3">
                 <a class="search-button" href="">
                     <i class="fas fa-search"></i>
                 </a>
             </div>
-        </div> 
+        </div>  -->
     </div>
 </header>
 
@@ -26,34 +26,37 @@
                 filters
             </div>
 
-            <div class="col-10">
-                <div class="notepad-container container">
+            <div class="col-12 col-sm-12 col-lg-10">
+                <div class="notepad-container container mb-4">
                     <div class="row">
                         <div class="col-11">
 
+                            <div class="row search justify-content-start w-100 mt-4">
+                                <div class="col-6 input">
+                                
+                                </div>
+                        
+                                <!-- <div class="col-1">
+                                    scroll
+                                </div> -->
+                        
+                                <div class="col-5">
+                                    <a class="search-button bg-secondary" href="">
+                                        <i class="fas fa-search"></i>
+                                    </a>
+                                </div>
+                            </div> 
                             
 
                             <section id="breadcrumbs">
-                                breadcrumbs
+                                <ul>
+                                    <li>Thema</li>
+                                    <li class="icon">Zorg</li>
+                                </ul>
                             </section>
 
-                            <section id="new-reads">
-                                <div class="row">
-                                    <!-- <swiper-event></swiper-event> -->
-                                    <div class="col-4">
-                                        <h2>New Reads</h2>
-                                        <h5>Climate partnerschips</h5>
-                                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry’s standard dummy text ever since the 1500s, when an unknown printer took a galley. 
-                                    </div>
-                                    <div class="col-8">
-                                        Covers
-                                    </div>
-
-                                     <div class="col-12">
-                                        <div class="divider-big"></div>
-                                    </div>
-                                </div>
-                            </section>
+                            <app-new-reads></app-new-reads>
+                        
                            
                             <div class="row">
                                 <div class="col-2">
@@ -61,54 +64,18 @@
                                 </div>
 
                                 <div class="col-10">
-                                      <!-- <app-video></app-video> -->
-                                      <section>
-                                        <div class="row">
-                                            <div id="video-block">
-                                                <h5>Kijk naar interessante gesprekken</h5>
-                                            
-                                            </div>
-                                        </div>
-                                    </section>
 
-                                    <!-- <app-whitepaper></app-whitepaper> -->
-                                    <section>
-                                        <div class="row">
-                                            <div id="paper-block">
-                                                <h5>Voer voor de grondige onderzoeker</h5>
-                                            
-                                            </div>
-                                        </div>
-                                    </section>
+                                    <app-video-slider></app-video-slider>
+                                    
 
-                                    <!-- <app-event></app-event> -->
-                                    <section>
-                                        <div class="row">
-                                            <div id="event-block">
-                                                <h5>In de buurt</h5>
-                                                <div class="image-overlay">
-                                                    <div class="image">image</div>
-                                                </div>
-                                            
-                                                <div class="text-block">
-                                                    <div class="title"> Zorgtotaal - zorgbeurs 2022</div>
-                                                    <div class="subtitle"> 21 juni 2022</div>
-                                                    <div class="text">Bijeenkomst van kleinschalige zorgaanbieders en innovatieve zorgdigitalisering</div>
-                                                </div>
-                                            
-                                            </div>
-                                        </div>
-                                    </section>
+                                    <app-whitepaper-slider></app-whitepaper-slider>
+                                    
 
-                                    <!-- <app-blog></app-blog> -->
-                                    <section>
-                                        <div class="row">
-                                            <div id="blog-block">
-                                                <h5>Deel jouw gedachten</h5>
-                                            
-                                            </div>
-                                        </div>
-                                    </section>
+                                    <app-event></app-event>
+                                    
+
+                                    <app-blog></app-blog>
+                                    
 
 
                                 </div>
@@ -128,6 +95,8 @@
                                 <img class="avatar-img" src="lcb-front-end/Portal/src/assets/images/Stockimages/157765614-profile-picture-of-smiling-indian-female-isolated-on-grey-studio-background-show-optimism-and-positi.jpg" alt="avatar">
                             </div>
                         </div>
+
+
                     </div>
                 </div>
             </div>

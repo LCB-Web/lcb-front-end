@@ -12,26 +12,30 @@
     margin-top: 135px;
 }
 
+
+
 .search {
     position: fixed;
     flex-wrap: nowrap;
-    justify-content: flex-end;
-    width: 100%;
+
     height: 3rem;
-    max-width: 100%;
     z-index: 9999;
     margin-top: 30px;
+
+    @media (max-width: 768px) {
+        visibility: hidden;
+    }
   
     .input { 
         background-color: white;
         border-radius: 7px;
         border: 1px solid #FAE14B;
         box-shadow: 0px 3px 6px #00000029;
+        margin-left: 15px;
     }
 
     .search-button {
   
-        background-color: #FAC406;
         display: inline-block;
         clip-path: polygon(25% 8%, 73% 8%, 100% 50%, 75% 92%, 24% 92%, 0% 50%);
         position: relative;
@@ -54,26 +58,61 @@
 }
 
 
-.container {
-    width: 100%;
-    padding-right: 65px;
-    padding-left: 65px;
-    margin-right: auto;
-    margin-left: auto;
-}
+
 
 #breadcrumbs {
-    margin-top: 25px;
+    margin-top: 100px;
+   
+
+    ul {
+        list-style: none;
+        display: flex;
+        padding: 0;
+
+        li {
+            margin: 0 1.25rem;
+            font-family: Open Sans;
+            font-size: 0.8rem;
+
+            &:first-of-type{
+                margin: 0;
+            }
+
+            
+        }
+
+        .icon {
+            &:after {
+                content: "";
+                height: 0.625rem;
+                width: 0.4375rem;
+                display: inline-block;
+                right: -1.5625rem;
+                bottom: -0.25rem;
+                background-image: url(/Portal/src/assets/images/Icons/arrow-breadcrumbs.svg);
+                background-repeat: no-repeat;
+                background-size: contain;
+                background-position: 50%;
+                position: relative;
+                top: 0.6875rem;
+            }
+        }
+    }
 }
 
 .notepad-container {
-    margin-top: 10px;
-    border-radius:  38px 0 0 38px ;
+    margin: 10px 10px 0 10px;
+    border-radius:  38px;
     box-shadow: 0px 5px 10px #00000029;
+    padding-right: 0 !important;
 
 
     .side-menu {
         border-radius: 0 38px 38px 0;
+        
+        @media (max-width: 768px) {
+            visibility: hidden;
+        }
 
         .avatar {
             margin-top:  30px;
@@ -93,69 +132,6 @@
     }
 }
 
-#new-reads {
-    margin-top: 110px;
-    .divider-big{
-        border: 10px solid #FAE14B;
-        color: #FAE14B ;
-    }
-}
 
-#video-block    {
-    margin-top: 80px;
-}
 
-#event-block {
 
-    background-color: #FFE000;
-    display: flex;
-    clip-path: polygon(15% 0%, 85% 0%, 100% 50%, 85% 100%, 15% 100%, 0% 50%);
-    -webkit-clip-path: polygon(15% 0%, 85% 0%, 100% 50%, 85% 100%, 15% 100%, 0% 50%);
-
-    .image-overlay {
-        background-color: #FFE000;
-        opacity: 60%;
-        box-shadow: 0px 3px 6px;
-        display: flex;
-        position: relative;
-        width: 100%;
-        height: 100%;
-        background-color: #424242;
-        -webkit-clip-path: polygon(15% 0%, 85% 0%, 100% 50%, 85% 100%, 15% 100%, 0% 50%);
-        clip-path: polygon(15% 0%, 85% 0%, 100% 50%, 85% 100%, 15% 100%, 0% 50%);
-        .image {
-            background-image: url('/assets/images/Stockimages/Zorgbeurs-algemeen-2.jpeg');
-            background-repeat: no-repeat;
-            display: block;
-            object-fit: cover;
-            height: auto;
-            width: 100%;
-        }
-    }
-    
-.text-block {
-    margin: 30px 0 74px 45px;
-
-    .title {
-        font-family: Bebas Neue;
-        font-size: 30px;
-        line-height: 36px;
-        color: black;
-    }
-
-    .subtitle {
-        font-family: Bebas Neue;
-        font-size: 16px;
-        line-height: 22px;
-        color: black;
-    }
-
-    .text {
-        font-family: Open Sans;
-        font-size: 16px;
-        line-height: 24px;
-        color: black;
-    }
-}
-    
-}
