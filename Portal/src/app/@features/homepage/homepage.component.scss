@@ -110,7 +110,8 @@
     .side-menu {
         border-radius: 0 38px 38px 0;
         
-        @media (max-width: 768px) {
+
+        @include media-breakpoint-down(md) {
             visibility: hidden;
         }
 
