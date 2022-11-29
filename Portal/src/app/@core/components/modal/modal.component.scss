@@ -4,10 +4,11 @@
   background-color: white;
   position: fixed;
   justify-content: flex-end;
-
+  overflow-x: hidden;
+  overflow-y:scroll;
   border-radius: 2rem 2rem 2rem 2rem;
   box-shadow: 2px 2px 12px rgb(0 0 0 / 30%);
-  overflow: hidden;
+  overflow-y: scroll;
   height: 1024px;
   max-height: 96%;
   max-width: 86%;
@@ -102,4 +103,15 @@
   bottom: 0;
   height: 1.5rem;
   background-color: yellow;
+}
+
+
+
+.app-events {
+  display:flex;
+  flex-direction:column;
+  position: fixed;
+  left: 3rem;
+  top: 30rem;
+  width: 100%;
 }
