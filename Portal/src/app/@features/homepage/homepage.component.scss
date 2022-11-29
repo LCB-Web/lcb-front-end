@@ -1,0 +1,143 @@
+.header-container {
+    position: relative;
+    -webkit-transform: none;
+    -ms-transform: none;
+    transform: none;
+    left: 0;
+    width: 350px;
+    height: auto;
+}
+
+.header-container + .container {
+    margin-top: 135px;
+}
+
+
+
+.search {
+    position: fixed;
+    flex-wrap: nowrap;
+
+    height: 3rem;
+    z-index: 9999;
+    margin-top: 30px;
+
+    // @include media-breakpoint-down(md) {
+    //     .search {
+    //         visibility: hidden;
+    //     }
+       
+    // }
+
+
+  
+    .input { 
+        background-color: white;
+        border-radius: 7px;
+        border: 1px solid #FAE14B;
+        box-shadow: 0px 3px 6px #00000029;
+        margin-left: 15px;
+    }
+
+    .search-button {
+  
+        display: inline-block;
+        clip-path: polygon(25% 8%, 73% 8%, 100% 50%, 75% 92%, 24% 92%, 0% 50%);
+        position: relative;
+        box-shadow: 0px 3px 6px #00000029;
+
+        &:hover {
+            background-color: #D19900;
+        }
+
+        i {
+            display: inline-block;
+            color: white;
+            z-index: 9999;
+            font-size: 20px;
+            margin: 15px;
+            position: relative;
+
+        }
+    }
+}
+
+
+
+
+#breadcrumbs {
+    margin-top: 100px;
+   
+
+    ul {
+        list-style: none;
+        display: flex;
+        padding: 0;
+
+        li {
+            margin: 0 1.25rem;
+            font-family: Open Sans;
+            font-size: 0.8rem;
+
+            &:first-of-type{
+                margin: 0;
+            }
+
+            
+        }
+
+        .icon {
+            &:after {
+                content: "";
+                height: 0.625rem;
+                width: 0.4375rem;
+                display: inline-block;
+                right: -1.5625rem;
+                bottom: -0.25rem;
+                background-image: url(/Portal/src/assets/images/Icons/arrow-breadcrumbs.svg);
+                background-repeat: no-repeat;
+                background-size: contain;
+                background-position: 50%;
+                position: relative;
+                top: 0.6875rem;
+            }
+        }
+    }
+}
+
+.notepad-container {
+    margin: 10px 10px 0 10px;
+    border-radius:  38px;
+    box-shadow: 0px 5px 10px #00000029;
+    padding-right: 0 !important;
+
+
+    .side-menu {
+        border-radius: 0 38px 38px 0;
+        
+
+        // @include media-breakpoint-down(md) {
+        //     visibility: hidden;
+        // }
+
+        .avatar {
+            margin-top:  30px;
+            clip-path: polygon(25% 8%, 73% 8%, 100% 50%, 75% 92%, 24% 92%, 0% 50%);
+            background-color: #D19900;
+        }
+    }
+
+  
+    .subtitle { 
+        width: 100%;
+        margin-top: 80px;
+
+        &.rotate {
+        transform: rotate(90deg);
+        }
+    }
+}
+
+
+
+

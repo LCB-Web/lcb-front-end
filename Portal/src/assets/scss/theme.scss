@@ -37,6 +37,9 @@ Product Page: https://easetemplate.com/html/coach
 // Bootstrap
 @import "bootstrap/bootstrap";
 
+//Mixin
+@import "bootstrap/mixins.scss";
+
 
 // Components
 @import "theme/components";
@@ -44,6 +47,14 @@ Product Page: https://easetemplate.com/html/coach
 
 // User
 @import "user";
+
+//Costum stylesheets
+@import "user-variables.scss";
+
+//Swiper
+@import 'swiper/scss';
+@import 'swiper/scss/navigation';
+@import 'swiper/scss/pagination';
 
 
 

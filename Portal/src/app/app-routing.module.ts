@@ -7,6 +7,12 @@ const routes: Routes = [
     loadChildren: () =>
       import('./@features/features.module').then((m) => m.featuresModule )
 
+  },
+  {
+    path:'home',
+    loadChildren: () =>
+      import('./@features/homepage/homepage.module').then((m) => m.HomepageModule )
+
   }
 ];
 

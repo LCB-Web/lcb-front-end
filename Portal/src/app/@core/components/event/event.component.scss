@@ -1,0 +1,55 @@
+#event-block {
+
+    background-color: #FFE000;
+    display: flex;
+    clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+
+    .image-overlay {
+        background-color: #FFE000;
+        opacity: 60%;
+        box-shadow: 0px 3px 6px;
+        display: flex;
+        position: relative;
+        width: 240px;
+        height: 265px;
+        transform: rotate(90deg);
+        background-color: #424242;
+        -webkit-clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+        clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+        .image {
+            background-image: url('/assets/images/Stockimages/Zorgbeurs-algemeen-2.jpeg');
+            background-repeat: no-repeat;
+            display: block;
+            object-fit: cover;
+            height: auto;
+            width: 100%;
+            transform: rotate(-90deg);
+        }
+    }
+    
+.text-block {
+    margin: 30px 0 74px 45px;
+
+    .title {
+        font-family: Bebas Neue;
+        font-size: 30px;
+        line-height: 36px;
+        color: black;
+    }
+
+    .subtitle {
+        font-family: Bebas Neue;
+        font-size: 16px;
+        line-height: 22px;
+        color: black;
+    }
+
+    .text {
+        font-family: Open Sans;
+        font-size: 16px;
+        line-height: 24px;
+        color: black;
+    }
+}
+    
+}

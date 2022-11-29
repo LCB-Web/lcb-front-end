@@ -1,0 +1,37 @@
+<section id="paper-block">
+    <div class="row">
+        <div class=" col-12 pl-0 pt-4 pb-3 divider">
+            <h4 class="subtitle secondary">Voer voor de grondige onderzoeker</h4>
+        </div>
+
+            <div class="col-12 align-self-end pl-0 pb-4">
+                <swiper
+                [config]="this.config"
+                (swiper)="onSwiper($event)"
+                (slideChange)="onSlideChange()"
+            >
+                    <ng-template swiperSlide class="paper-slide">
+                        <img class="w-100" src="assets/images/Stockimages/Climate-Partnerships_WEB-komprimeret10241024_1.png" alt="">
+                        <div class="paper-title pt-2">tekst</div>
+                    </ng-template>
+            
+                    <ng-template swiperSlide class="paper-slide">
+                    <img class="w-100" src="assets/images/Stockimages/spotlight-group2.jpg" alt="">
+                    </ng-template>
+            
+                    <ng-template swiperSlide class="paper-slide">
+                    <img class="w-100" src="assets/images/Stockimages/ILPGGZLNjGtl5ogOJ_ko2UxoupI-fFG55neZWquSZ64.jpg" alt="">
+                    </ng-template>
+            
+                    <ng-template swiperSlide class="paper-slide">
+                    <img class="w-100" src="assets/images/Stockimages/Climate-Partnerships_WEB-komprimeret10241024_1.png" alt="">
+                    </ng-template>
+
+                    <ng-template swiperSlide class="paper-slide">
+                        <img class="w-100" src="assets/images/Stockimages/Climate-Partnerships_WEB-komprimeret10241024_1.png" alt="">
+                    </ng-template>
+
+                </swiper>
+        </div>
+    </div>
+</section>

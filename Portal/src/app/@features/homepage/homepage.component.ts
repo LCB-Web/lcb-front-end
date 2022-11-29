@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-
 import {ThemaService} from "../../@shared/services/thema.service";
 import {NieuwsService} from "../../@shared/services/nieuws.service";
 import {AgendaService} from "../../@shared/services/agenda.service";
@@ -7,7 +6,8 @@ import {AgendaService} from "../../@shared/services/agenda.service";
 @Component({
   selector: 'app-homepage',
   templateUrl: './homepage.component.html',
-  styleUrls: ['./homepage.component.scss']
+  styleUrls: ['./homepage.component.scss',
+  '../../../assets/scss/_user.scss']
 })
 export class HomepageComponent implements OnInit {
 

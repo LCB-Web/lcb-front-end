@@ -1,4 +1,6 @@
 @import "./theme/variables";
+// @import "./user";
+// @import "./theme.scss";
 
 // 
 // user-variables.scss
@@ -8,8 +10,8 @@
 // Remove the "//" to comment it in and see it in action!
 // $primary: #000;
 
-$primary: #FFCB17;
-$secondary: #04A3E0;
+$primary: #FFE000;
+$secondary: #FAC406;
 $success:  #B8D433;
 $info: #1EBEBE;
 $warning: #F6BD30;
@@ -35,3 +37,5 @@ $input-border-color: $gray-900;
 $input-placeholder-color: $gray-800;
 
 $container-max-widths: (sm: 540px, md: 720px, lg: 960px, xl: 1390px) !default;
+
+$bg-primary:  #FFE000 !important;
