@@ -6,7 +6,8 @@ import {AgendaService} from "../../@shared/services/agenda.service";
 @Component({
   selector: 'app-homepage',
   templateUrl: './homepage.component.html',
-  styleUrls: ['./homepage.component.scss']
+  styleUrls: ['./homepage.component.scss',
+  '../../../assets/scss/_user.scss']
 })
 export class HomepageComponent implements OnInit {
 

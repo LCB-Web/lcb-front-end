@@ -1,5 +1,6 @@
 @import "./theme/variables";
-
+// @import "./user";
+// @import "./theme.scss";
 
 // 
 // user-variables.scss
@@ -37,4 +38,4 @@ $input-placeholder-color: $gray-800;
 
 $container-max-widths: (sm: 540px, md: 720px, lg: 960px, xl: 1390px) !default;
 
-//breakpoints
+$bg-primary:  #FFE000 !important;

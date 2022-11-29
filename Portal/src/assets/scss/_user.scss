@@ -1,13 +1,12 @@
-
+@import "./bootstrap/bootstrap.scss";
+@import "./user-variables";
 
 //
 // user.scss
 // Use this to write your custom SCSS
 //
 
-body{
-  //padding-top: 130px;
-}
+
 // None homepage header
 body:not([data-pathname="/home"]) {
   //padding-top: 130px;
