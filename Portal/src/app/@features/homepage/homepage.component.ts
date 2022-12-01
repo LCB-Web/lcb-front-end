@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import {ThemaService} from "../../@shared/services/thema.service";
 import {NieuwsService} from "../../@shared/services/nieuws.service";
 import {AgendaService} from "../../@shared/services/agenda.service";
-
+import D from "../../../assets/js/Mockdata.json";
 @Component({
   selector: 'app-homepage',
   templateUrl: './homepage.component.html',
@@ -22,6 +22,7 @@ export class HomepageComponent implements OnInit {
   nieuws:any;
   agendas:any;
 
+  Docs: any = D;
 
   T: any = {
     "@odata.context": "https://lcb-test.microsoftcrmportals.com/_api/$metadata#bhs_themas(bhs_name,bhs_korteomschrijving,lcb_Themaafbeelding(msdyncrm_blobcdnuri),lcb_Themablockafbeelding(msdyncrm_blobcdnuri))",
@@ -143,11 +144,12 @@ export class HomepageComponent implements OnInit {
     ]
   }
 
+
   ngOnInit(): void {
     this.nieuws = this.nieuwsService.nieuwsOverview()
     this.themas = this.themaService.themaOverview()
 
-
+    console.log(this.Docs);
     this.themaService.themaOverview().subscribe(T => {
       console.log(T)
     })
