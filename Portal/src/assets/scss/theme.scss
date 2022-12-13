@@ -29,16 +29,15 @@ Product Page: https://easetemplate.com/html/coach
 // User Variables
 @import "user-variables";
 
-
-// theme variables
-@import "theme/variables";
-
+//Mixin
+@import "bootstrap/mixins.scss";
 
 // Bootstrap
 @import "bootstrap/bootstrap";
 
-//Mixin
-@import "bootstrap/mixins.scss";
+
+// theme variables
+@import "theme/variables";
 
 
 // Components

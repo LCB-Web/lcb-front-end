@@ -7,7 +7,8 @@ import D from "../../../assets/js/Mockdata.json";
   selector: 'app-homepage',
   templateUrl: './homepage.component.html',
   styleUrls: ['./homepage.component.scss',
-  '../../../assets/scss/_user.scss']
+  // '../../../assets/scss/_user.scss',
+]
 })
 export class HomepageComponent implements OnInit {
 
