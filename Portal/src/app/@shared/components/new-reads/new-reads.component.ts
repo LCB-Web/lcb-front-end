@@ -13,7 +13,7 @@ SwiperCore.use([Navigation, Scrollbar, A11y]);
 })
 export class NewReadsComponent implements OnInit {
   config: SwiperOptions = {
-    slidesPerView: 3,
+    slidesPerView: 2.5,
     spaceBetween: 30,
     navigation: false,
     pagination: { clickable: true },

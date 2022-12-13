@@ -22,13 +22,6 @@
     z-index: 9999;
     margin-top: 30px;
 
-    // @include media-breakpoint-down(md) {
-    //     .search {
-    //         visibility: hidden;
-    //     }
-       
-    // }
-
 
   
     .input { 
@@ -114,11 +107,7 @@
 
     .side-menu {
         border-radius: 0 38px 38px 0;
-        
-
-        // @include media-breakpoint-down(md) {
-        //     visibility: hidden;
-        // }
+    
 
         .avatar {
             margin-top:  30px;
@@ -138,6 +127,21 @@
     }
 }
 
+
+@media (max-width: 768px) {
+
+    .notepad-container {
+        padding-right: 0;
+    }
+
+    .search {
+            display: none !important;
+    }
+
+    .side-menu {
+        display: none;
+    }
+ }
 
 
 
