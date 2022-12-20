@@ -1,102 +1,174 @@
-.container {
-  display: flex;
-  flex-direction: row;
-  max-width: 100%;
-  height: 100%;
-  padding-left: 0;
-  position: fixed;
-  z-index: 2;
-}
-
 .panel {
   display: flex;
   flex-direction: column;
   padding-top: 3rem;
-  padding-left: 2rem;
-  align-items: flex-start;
-  background-color: white;
-  color: black;
-  width: 250px;
   height: 100%;
-}
+  width: 100%;
 
-.panel-item {
-  padding-bottom: 1.5rem;
-  font-size: 14px;
-  h3 {
-    font-size: 20px;
+
+  .panel-item {
+    font-size: 14px;
+
+    select {
+      border: none;
+      color: #C89B34;
+    }
+
+    .hex {
+      clip-path: polygon(25% 8%, 73% 8%, 100% 50%, 75% 92%, 24% 92%, 0% 50%);
+      width: 2.5rem;
+      height: 2.5rem;
+    }
+
+    #multimodaal {
+
+      &:hover {
+        .hex  {
+          background-color: var(--multimodaal) !important;
+        }
+      }
+      
+      .multimodaal {
+        background-size: 1.2rem;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-image: url('../../../../assets/images/icons/multimodaal.svg');
+      }
+    }
+
+    #smart-industrie {
+
+      &:hover {
+        .hex  {
+          background-color: var(--smartindustry) !important;
+        }
+      }
+      
+      .industrie {
+        background-size: 1.2rem;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-image: url('../../../../assets/images/icons/industrie.svg');
+      }
+    }
+
+    #leefbare-stad {
+
+      &:hover {
+        .hex  {
+          background-color: var(--leefbarestad) !important;
+        }
+      }
+      
+      .stad {
+        background-size: 1.2rem;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-image: url('../../../../assets/images/icons/groenestad.svg');
+      }
+    }
+
+    #zorglogistiek {
+
+      &:hover {
+        .hex  {
+          background-color: var(--zorg) !important;
+        }
+      }
+      
+      .zorg {
+        background-size: 1.2rem;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-image: url('../../../../assets/images/icons/zorg.svg');
+      }
+    }
+
+    #evenementen-logistiek {
+
+      &:hover {
+        .hex  {
+          background-color: var(--events) !important;
+        }
+      }
+      
+      .evenementen {
+        background-size: 1.2rem;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-image: url('../../../../assets/images/icons/evenement.svg');
+      }
+    }
+
+    #data-logistiek {
+
+      &:hover {
+        .hex  {
+          background-color: var(--datagedreven) !important;
+        }
+      }
+      
+      .data {
+        background-size: 1.2rem;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-image: url('../../../../assets/images/icons/data.svg');
+      }
+    }
+
+
+
+    .input-year {
+      gap: 1rem;
+
+      input {
+        border:  1px solid var(--primary);
+        border-radius: 3px;
+        background: white;
+        display: inline;
+        width: 100%;
+      }
+    }
+
+    .radio-form {
+      flex-direction: column;
+
+      .radio {
+        cursor: pointer;
+
+        span {
+          
+          &:before {
+            margin-right: 10px;
+            content: url(../../../../assets/svg/hexa.svg);
+          }
+
+          &:after {
+            width: 14px;
+            height: 14px;
+            transition: 300ms;
+            opacity: 0;
+          }
+        }
+
+        input {
+          display: none;
+
+          &:checked + span::before {
+            opacity: 1;
+            content: url(../../../../assets/svg/hexa-black.svg);
+
+            &.check {
+              content: url(../../../../assets/images/Icons/check.svg);
+            }
+          }
+        }
+      }
+    }
   }
 }
 
-.hex-yellow {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  margin-bottom: 5px;
-  gap: 1rem;
-  z-index: 2000;
-  cursor: pointer;
-  span {
-    z-index: 1;
-    pointer-events: none;
-  }
-  svg {
-    pointer-events: none;
-  }
-}
 
-.input-year {
-  display: flex;
-  flex-direction: row;
-  gap: 1rem;
-  input {
-    border-color: var(--primary);
-    border-width: 1px;
-    width: 80px;
-  }
-}
 
-.radio-form {
-  display: flex;
-  flex-direction: column;
-}
-.radio {
-  display: flex;
-  justify-content: row;
-  padding: 0px 10px;
-  cursor: pointer;
-  input {
-    display: none;
-  }
-}
 
-.radio span {
-  display: flex;
-  align-content: center;
-  line-height: 15px;
-}
 
-.radio span:before,
-.radio span:after {
-  content: "";
-}
-
-.radio span::before {
-  content: url(../../../../assets/svg/hexa.svg);
-  display: flex;
-  margin-right: 10px;
-  height: 10px;
-}
-
-.radio span::after {
-  display: flex;
-  width: 14px;
-  height: 14px;
-  transition: 300ms;
-  opacity: 0;
-}
-
-.radio input:checked + span::before {
-  opacity: 1;
-  content: url(../../../../assets/svg/hexa-black.svg);
-}
