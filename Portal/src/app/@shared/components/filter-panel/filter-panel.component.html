@@ -1,132 +1,113 @@
-<div class="container">
+<div class="filters">
   <div class="panel">
-    <div class="panel-item">
-      <h3>THEMA</h3>
-      <div (click)="getThemeID($event)" id="multimodaal" class="hex-yellow">
-        <svg width="40px" height="40px">
-          <image
-            xlink:href="../../../../assets/svg/hexa-yellow.svg"
-            src="yourfallback.png"
-            width="40px"
-            height="100%"
-          />
-        </svg>
+
+    <div class="panel-item pb-5">
+      <h4>thema</h4>
+
+      <div (click)="getThemeID($event)" id="multimodaal" class="d-flex justify-content-between align-items-center">
+        <div class="hex multimodaal bg-primary"></div>
         <span>Multimodaal</span>
       </div>
-      <div (click)="getThemeID($event)" id="smart-industrie" class="hex-yellow">
-        <svg width="40px" height="40px">
-          <image
-            xlink:href="../../../../assets/svg/hexa-yellow.svg"
-            src="yourfallback.png"
-            width="40px"
-            height="100%"
-          />
-        </svg>
+
+      <div (click)="getThemeID($event)" id="smart-industrie" class="d-flex justify-content-between align-items-center">
+        <div class="hex industrie bg-primary"></div>
         <span>Smart industrie</span>
       </div>
-      <div (click)="getThemeID($event)" id="leefbare-stad" class="hex-yellow">
-        <svg width="40px" height="40px">
-          <image
-            xlink:href="../../../../assets/svg/hexa-yellow.svg"
-            src="yourfallback.png"
-            width="40px"
-            height="100%"
-          />
-        </svg>
+
+      <div (click)="getThemeID($event)" id="leefbare-stad" class="d-flex justify-content-between align-items-center">
+        <div class="hex stad bg-primary"></div>
         <span>Leefbare Stad</span>
       </div>
-      <div (click)="getThemeID($event)" id="zorglogistiek" class="hex-yellow">
-        <svg width="40px" height="40px">
-          <image
-            xlink:href="../../../../assets/svg/hexa-yellow.svg"
-            src="yourfallback.png"
-            width="40px"
-            height="100%"
-          />
-        </svg>
+
+      <div (click)="getThemeID($event)" id="zorglogistiek" class="d-flex justify-content-between align-items-center">
+        <div class="hex zorg bg-primary"></div>
         <span>Zorglogistiek</span>
       </div>
-      <div
-        (click)="getThemeID($event)"
-        id="evenementen-logistiek"
-        class="hex-yellow"
-      >
-        <svg width="40px" height="40px">
-          <image
-            xlink:href="../../../../assets/svg/hexa-yellow.svg"
-            src="yourfallback.png"
-            width="40px"
-            height="100%"
-          />
-        </svg>
+
+      <div (click)="getThemeID($event)" id="evenementen-logistiek" class="d-flex justify-content-between align-items-center">
+        <div class="hex evenementen bg-primary"></div>
         <span>Evenementen logistiek</span>
       </div>
-      <div (click)="getThemeID($event)" id="data-logistiek" class="hex-yellow">
-        <svg width="40px" height="40px">
-          <image
-            xlink:href="../../../../assets/svg/hexa-yellow.svg"
-            src="yourfallback.png"
-            width="40px"
-            height="100%"
-          />
-        </svg>
+      
+      <div (click)="getThemeID($event)" id="data-logistiek" class="d-flex justify-content-between align-items-center">
+        <div class="hex data bg-primary"></div>
         <span>Data logistiek</span>
       </div>
+
     </div>
-    <div class="panel-item">
-      <h3>TYPE</h3>
-      <div class="radio-form">
-        <label class="radio">
+
+    <div class="panel-item pb-5">
+      <h4>type</h4>
+    
+      <div class="radio-form d-flex">
+
+        <label class="radio d-flex align-content-center align-items-center">
           <input (click)="onItemChange($event)" type="radio" id="whitepaper" />
-          <span>Whitepaper</span>
+          <span class="d-flex align-content-center check">Whitepaper</span>
         </label>
+
         <label class="radio">
           <input type="radio" name="radio" />
-          <span>Video</span>
+          <span class="d-flex align-content-center">Video</span>
         </label>
+
         <label class="radio">
           <input type="radio" name="radio" />
-          <span>Blog</span>
+          <span class="d-flex align-content-center">Blog</span>
         </label>
+
         <label class="radio">
           <input type="radio" name="radio" />
-          <span>Rapport</span>
+          <span class="d-flex align-content-center" >Rapport</span>
         </label>
+
         <label class="radio">
           <input type="radio" name="radio" />
-          <span> Boek</span>
+          <span class="d-flex align-content-center" > Boek</span>
         </label>
+
         <label class="radio">
           <input type="radio" name="radio" />
-          <span> Artikel</span>
+          <span class="d-flex align-content-center"> Artikel</span>
         </label>
+
       </div>
     </div>
-    <div class="panel-item">
-      <h3>PUBLICATIEJAAR</h3>
-      <div class="input-year">
+
+    <div class="panel-item pb-5">
+      <h4>publicatiejaar</h4>
+      <div class="input-year d-flex mr-3">
         <input placeholder="Van" type="text" />
         <input placeholder="Tot" type="text" />
       </div>
     </div>
-    <div class="panel-item">
-      <h3>LENGTE</h3>
+
+    <div class="panel-item pb-5">
+      <h4>lengte</h4>
+      <div>
+        <span>0</span>
+        <span>200 pagina's</span>
+      </div>
     </div>
-    <div class="panel-item">
-      <h3>NOMINATIE/PRIJS</h3>
-      <label class="radio">
-        <input type="radio" name="radio" />
-        <span>Nominatie/prijs</span>
-      </label>
+
+    <div class="panel-item pb-5">
+      <h4>nominatie/prijs</h4>
+
+      <div class="radio-form d-flex">
+        <label class="radio">
+          <input type="radio" name="radio" />
+          <span class="d-flex align-content-center">Nominatie/prijs</span>
+        </label>
+      </div>
     </div>
-    <div class="panel-item">
-      <h3>SORTEREN OP</h3>
-      <select id="sort">
+
+    <div class="panel-item pb-5 d-flex justify-content-between">
+      <h4>sorteren op</h4>
+      <select id="sort" class="mb-2">
         <option value="meest_relevant">Meest relevant</option>
       </select>
     </div>
+
   </div>
-  <div class="app-modal"></div>
-  <div class="app-user-panel"></div>
 </div>
 
